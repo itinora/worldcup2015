@@ -35,4 +35,21 @@ angular.module('worldcup2015', [])
             }
             return result;
         };
+
+        $scope.venues =  [
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'},
+            {'stadium': 'Stadium 1', 'city': 'Melbourne'}
+        ];
     }]);
