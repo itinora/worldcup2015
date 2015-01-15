@@ -23,8 +23,6 @@ body {
     position: relative;
     top: 20px;
     left: 600px;
-    margin-left: auto;
-    margin-right: auto;
     width: 700px;
 }
 
@@ -90,4 +88,35 @@ body {
 
 .team-name {
 
+}
+
+#venues {
+    position: relative;
+    top: 600px;
+    left: 150px;
+    max-width: 1200px;
+}
+
+.venue {
+    font-weight: 300;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.venue:hover {
+    border-color: lightgray;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.stadium {
+    font-size: 1.5em;
+}
+
+.city {
+  font-size: 1em;
 }
