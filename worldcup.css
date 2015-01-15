@@ -1,0 +1,26 @@
+.date {
+    width: 60px;
+    height: 60px;
+    border: solid 1px transparent;
+    font: 100%/1.5em 'Roboto', Arial, Geneva, sans-serif !important;
+    margin: 10px 0px;
+    border-radius: 999px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.date:hover {
+    border-color: lightgray;
+}
+
+.month {
+    font-weight: 300;
+    font-size: 1em;
+    margin-left: 17px;
+}
+
+.dateOfMonth {
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
