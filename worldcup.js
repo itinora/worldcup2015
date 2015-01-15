@@ -9,4 +9,30 @@ angular.module('worldcup2015', [])
         $scope.dateOfMonth = function(date){
             return date.substr(8,2);
         };
+
+        $scope.teams = [
+            {'name': 'England', 'pool': 'A'},
+            {'name': 'Australia', 'pool': 'A'},
+            {'name': 'Sri Lanka', 'pool': 'A'},
+            {'name': 'Bangladesh', 'pool': 'A'},
+            {'name': 'New Zealand', 'pool': 'A'},
+            {'name': 'Afghanistan', 'pool': 'A'},
+            {'name': 'Scotland', 'pool': 'A'},
+            {'name': 'South Africa', 'pool': 'B'},
+            {'name': 'India', 'pool': 'B'},
+            {'name': 'Pakistan', 'pool': 'B'},
+            {'name': 'West Indies', 'pool': 'B'},
+            {'name': 'Zimbabwe', 'pool': 'B'},
+            {'name': 'Ireland', 'pool': 'B'},
+            {'name': 'United Arab Emirates', 'pool': 'B'},
+        ];
+        $scope.teamsInPool = function(pool){
+            var result = [];
+            for(var i= 0, team; team = $scope.teams[i]; i++) {
+                if(team.pool === pool) {
+                    result.push(team);
+                }
+            }
+            return result;
+        };
     }]);
