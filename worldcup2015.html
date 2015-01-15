@@ -18,8 +18,8 @@
     <![endif]-->
 </head>
 <body ng-app="worldcup2015">
-    <div class="container">
-        <div ng-controller="ScheduleCtrl">
+    <div class="bg"></div>
+        <div id="container" ng-controller="ScheduleCtrl">
             <div id="dates">
                 <div ng-repeat="date in dates" class="date">
                     <div class="month">{{ month(date) }}</div>
@@ -29,7 +29,6 @@
             <div id="teams"></div>
             <div id="venues"></div>
         </div>
-    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
     <script src="worldcup.js"></script>
 </body>
