@@ -1,3 +1,7 @@
+body {
+    font: 100%/1.5em 'Roboto', Arial, Geneva, sans-serif !important;
+}
+
 .bg {
     background-image: url("bg.jpg");
     background-size: cover;
@@ -28,7 +32,6 @@
     width: 60px;
     height: 60px;
     border: solid 1px transparent;
-    font: 100%/1.5em 'Roboto', Arial, Geneva, sans-serif !important;
     margin: 10px 0px;
     border-radius: 999px;
     display: inline-block;
@@ -52,4 +55,39 @@
     font-weight: 400;
     font-size: 1.5em;
     margin-left: 15px;
+}
+
+.pool {
+    position: absolute;
+    top: 200px;
+}
+
+.pool-header {
+    width: 300px;
+    height: 25px;
+    background-color: lightgreen;
+    font-weight: 500;
+    font-size: 1.8em;
+    padding: 10px;
+    color: white;
+}
+
+.team {
+    font-size: 1.8em;
+    font-weight: 300;
+    padding: 10px;
+    width: 300px;
+    height: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.team:hover {
+    border-color: lightgray;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.team-name {
+
 }

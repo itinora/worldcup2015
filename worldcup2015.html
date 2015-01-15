@@ -26,7 +26,22 @@
                     <div class="dateOfMonth">{{ dateOfMonth(date) }}</div>
                 </div>
             </div>
-            <div id="teams"></div>
+
+            <div id="teams">
+                <div class="pool" style="left: 100px">
+                    <div class="pool-header">POOL A</div>
+                    <div ng-repeat="team in teamsInPool('A')" class="team">
+                        <div class="team-name">{{ team.name }}</div>
+                    </div>
+                </div>
+                <div class="pool" style="left: 1200px">
+                    <div class="pool-header">POOL B</div>
+                    <div ng-repeat="team in teamsInPool('B')" class="team">
+                        <div class="team-name">{{ team.name }}</div>
+                    </div>
+                </div>
+            </div>
+
             <div id="venues"></div>
         </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
