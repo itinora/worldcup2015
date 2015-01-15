@@ -8,8 +8,8 @@
     <meta name="author" content="itinora">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>Cricket World Cup 2015 Schedule</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-    <script src="worldcup.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet'
+          type='text/css'>
     <link href="worldcup.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -18,10 +18,19 @@
     <![endif]-->
 </head>
 <body ng-app="worldcup2015">
-<div class="container">
-    <div ng-controller="ScheduleCtrl">
-        <span>Hello Cricket World Cup {{ year }}!</span>
+    <div class="container">
+        <div ng-controller="ScheduleCtrl">
+            <div id="dates">
+                <div ng-repeat="date in dates" class="date">
+                    <div class="month">{{ month(date) }}</div>
+                    <div class="dateOfMonth">{{ dateOfMonth(date) }}</div>
+                </div>
+            </div>
+            <div id="teams"></div>
+            <div id="venues"></div>
+        </div>
     </div>
-</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+    <script src="worldcup.js"></script>
 </body>
 </html>
