@@ -21,29 +21,29 @@
     <div class="bg"></div>
         <div id="container" ng-controller="ScheduleCtrl">
             <div id="dates">
-                <div ng-repeat="date in dates" class="date">
-                    <div class="month">{{ month(date) }}</div>
-                    <div class="dateOfMonth">{{ dateOfMonth(date) }}</div>
+                <div ng-repeat="matchDate in dates" class="date" ng-mouseover="onDateSelect(date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
+                    <div class="month">{{ month(matchDate.date) }}</div>
+                    <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
                 </div>
             </div>
 
             <div id="teams">
                 <div class="pool" style="left: 100px">
                     <div class="pool-header">POOL A</div>
-                    <div ng-repeat="team in teamsInPool('A')" class="team">
+                    <div ng-repeat="team in teamsInPool('A')" class="team" ng-mouseover="onTeamSelect(date);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
                         <div class="team-name">{{ team.name }}</div>
                     </div>
                 </div>
                 <div class="pool" style="left: 1200px">
                     <div class="pool-header">POOL B</div>
-                    <div ng-repeat="team in teamsInPool('B')" class="team">
+                    <div ng-repeat="team in teamsInPool('B')" class="team" ng-mouseover="onTeamSelect(date);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
                         <div class="team-name">{{ team.name }}</div>
                     </div>
                 </div>
             </div>
 
             <div id="venues">
-                <div ng-repeat="venue in venues" class="venue">
+                <div ng-repeat="venue in venues" class="venue" ng-mouseover="onVenueSelect(date);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
                     <div class="stadium">{{ venue.stadium }}</div>
                     <div class="city">{{ venue.city }}</div>
                 </div>
