@@ -1,1 +1,9 @@
 .idea
+node_modules/
+bower_components/
+*.log
+.iml
+.DS_Store
+
+build/
+dist/

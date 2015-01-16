@@ -21,19 +21,13 @@
 <body ng-app="worldcup2015" ng-cloak>
         <div ng-controller="ScheduleCtrl">
             <div class="grid-container">
-                <div class="grid-25">
-                    &nbsp;
-                </div>
-                <div class="grid-50 align-center">
+                <div class="grid-100 align-center">
                     <div id="dates">
                         <div ng-repeat="matchDate in dates" class="date"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();">
                             <div class="month">{{ month(matchDate.date) }}</div>
                             <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
                         </div>
                     </div>
-                </div>
-                <div class="grid-25">
-                    &nbsp;
                 </div>
             </div>
 
@@ -48,10 +42,11 @@
                 </div>
 
                 <div class="grid-50 align-center">
-                        <div ng-repeat="match in selectedMatches">
-                            {{ ::match.team_one_long}} vs {{::match.team_two_long}}
+                        <div ng-repeat="match in selectedMatches" style="text-align:center;font-size: 1.5em;padding-top: 5px">
+                            <div>{{::match.team_one_long}} <i style="font-size: 1em;color: white">vs</i> {{::match.team_two_long}}</div>
+                            <div>{{::match.match_type}} <i style="font-size: 1em;color: white">,&nbsp;</i> {{::match.start_time | uppercase}}</div>
                         </div>
-                        <div ng-hide="selectedMatches.length">
+                        <div ng-hide="selectedMatches.length" style="text-align:center;font-size: 1.5em">
                             Hover on dates, teams or venues
                         </div>
                 </div>
@@ -59,27 +54,18 @@
                 <div class="grid-25">
                         <div class="pool-header">POOL B</div>
                         <div ng-repeat="team in ::teamsInPool('B')" class="team" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
-                            <div class="team-name">{{ ::team.name }}</div>
+                            <div>{{ ::team.name }}</div>
                         </div>
                 </div>
             </div>
-
             <div class="grid-container" style="padding-top: 20px;">
-                <div class="grid-25">
-                    &nbsp;
-                </div>
-
-                <div class="grid-50 align-center">
+                <div class="grid-100 align-center">
                     <div id="venues">
                         <div ng-repeat="venue in ::venues" class="venue" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
                             <div class="stadium">{{ venue.stadium }}</div>
                             <div class="city">{{ venue.city }}</div>
                         </div>
                     </div>
-                </div>
-
-                <div class="grid-25">
-                    &nbsp;
                 </div>
             </div>
         </div>
