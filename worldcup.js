@@ -1,18 +1,12 @@
 angular.module('worldcup2015', [])
-.controller('ScheduleCtrl', [ '$scope', function ($scope) {
+    .factory('_', function() {
+        return window._; // assumes underscore has already been loaded on the page
+})
+.controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', function ($scope, MatchesSvc, _) {
         'use strict';
 
-        $scope.dates = [
-            { 'date': '2015-02-14', 'selected': false},
-            { 'date': '2015-02-15', 'selected': false},
-            { 'date': '2015-02-16', 'selected': false},
-            { 'date': '2015-02-17', 'selected': false},
-            { 'date': '2015-02-19', 'selected': false},
-            { 'date': '2015-02-20', 'selected': false},
-            { 'date': '2015-03-01', 'selected': false},
-            { 'date': '2015-03-02', 'selected': false},
-            { 'date': '2015-03-03', 'selected': false}
-        ];
+        $scope.dates = MatchesSvc.getAllMatchDates();
+
         $scope.month = function(date) {
             return date.substr(6,1) === '2' ? 'Feb' : 'Mar';
         };
@@ -20,13 +14,31 @@ angular.module('worldcup2015', [])
             return date.substr(8,2);
         };
 
+        $scope.selectedMatches = {};
         $scope.onDateSelect = function(date) {
             $scope.deselectAll();
-            $scope.teams[2].selected = true;
-            $scope.teams[7].selected = true;
-            $scope.teams[10].selected = true;
-            $scope.venues[1].selected = true;
-            $scope.venues[8].selected = true;
+
+            $scope.selectedMatches = MatchesSvc.getMatchesForDate(date);
+
+            $scope.teams = _.map($scope.teams, function(team) {
+                _.each($scope.selectedMatches, function(match) {
+                    if(match.team_one_long === team.name || match.team_two_long === team.name) {
+                        team.selected = true;
+                    }
+                });
+                return team;
+            });
+
+            $scope.venues = _.map($scope.venues, function(venue) {
+                _.each($scope.selectedMatches, function(match) {
+                    if(match.city === venue.city) {
+                        venue.selected = true;
+                    }
+                });
+                return venue;
+            });
+
+
         };
 
         $scope.onDateDeselect = function(date) {
@@ -62,23 +74,28 @@ angular.module('worldcup2015', [])
         };
         $scope.onTeamSelect = function(team) {
             $scope.deselectAll();
-            $scope.dates[2].selected = true;
-            $scope.dates[4].selected = true;
-            $scope.venues[5].selected = true;
-            $scope.venues[9].selected = true;
+            $scope.selectedMatches = MatchesSvc.getMatchesForTeam(team);
+            //$scope.dates[2].selected = true;
+            //$scope.dates[4].selected = true;
+            //$scope.venues[5].selected = true;
+            //$scope.venues[9].selected = true;
         };
 
         $scope.onVenueSelect = function(venue) {
             $scope.deselectAll();
-            $scope.dates[0].selected = true;
-            $scope.dates[1].selected = true;
-            $scope.dates[5].selected = true;
-            $scope.teams[4].selected = true;
-            $scope.teams[8].selected = true;
-            $scope.teams[11].selected = true;
+            $scope.selectedMatches = MatchesSvc.getMatchesForVenue(venue);
+
+            //$scope.dates[0].selected = true;
+            //$scope.dates[1].selected = true;
+            //$scope.dates[5].selected = true;
+            //$scope.teams[4].selected = true;
+            //$scope.teams[8].selected = true;
+            //$scope.teams[11].selected = true;
         };
 
         $scope.deselectAll = function() {
+            $scope.selectedMatches = {};
+
             for(var i= 0, date; date = $scope.dates[i];i++) {
                 date.selected = false;
             }
@@ -90,21 +107,6 @@ angular.module('worldcup2015', [])
             }
         };
 
-
-        $scope.venues =  [
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false},
-            {'stadium': 'Stadium 1', 'city': 'Melbourne', 'selected': false}
-        ];
-    }]);
+        $scope.venues = MatchesSvc.getAllVenues();
+    }]
+);
