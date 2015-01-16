@@ -11,81 +11,84 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet'
           type='text/css'>
     <link href="worldcup.css" rel="stylesheet">
-    <link href="unsemantic-grid-responsive-tablet-no-ie7.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="worldcup2015" ng-cloak>
-        <div ng-controller="ScheduleCtrl">
-            <div class="grid-container">
-                <div class="grid-25">
-                    &nbsp;
-                </div>
-                <div class="grid-50 align-center">
-                    <div id="dates">
-                        <div ng-repeat="matchDate in dates" class="date"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();">
-                            <div class="month">{{ month(matchDate.date) }}</div>
-                            <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-25">
-                    &nbsp;
-                </div>
-            </div>
+<body ng-app="worldcup2015" ng-cloak onload="scaleWindow()">
+<div class="bg"></div>
 
-            <div class="grid-container">
-                <div class="grid-25">
-                    <div id="teams">
-                        <div class="pool-header">POOL A</div>
-                        <div ng-repeat="team in ::teamsInPool('A')" class="team" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
-                            <div class="team-name">{{ team.name }}</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-50 align-center">
-                        <div ng-repeat="match in selectedMatches">
-                            {{ ::match.team_one_long}} vs {{::match.team_two_long}}
-                        </div>
-                        <div ng-hide="selectedMatches.length">
-                            Hover on dates, teams or venues
-                        </div>
-                </div>
-
-                <div class="grid-25">
-                        <div class="pool-header">POOL B</div>
-                        <div ng-repeat="team in ::teamsInPool('B')" class="team" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
-                            <div class="team-name">{{ ::team.name }}</div>
-                        </div>
-                </div>
-            </div>
-
-            <div class="grid-container" style="padding-top: 20px;">
-                <div class="grid-25">
-                    &nbsp;
-                </div>
-
-                <div class="grid-50 align-center">
-                    <div id="venues">
-                        <div ng-repeat="venue in ::venues" class="venue" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
-                            <div class="stadium">{{ venue.stadium }}</div>
-                            <div class="city">{{ venue.city }}</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-25">
-                    &nbsp;
-                </div>
+<div id="container" ng-controller="ScheduleCtrl">
+    <div class="date-strip control">
+        <div id="dates">
+            <div ng-repeat="matchDate in dates" class="date"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();">
+                <div class="month">{{ month(matchDate.date) }}</div>
+                <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
             </div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-    <script src="worldcup.js"></script>
-    <script src="matches.svc.js"></script>
+    </div>
+
+    <div class="teams">
+        <div class="pool-header pool-a">POOL A</div>
+        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
+            <div class="team-name">{{ team.name }}</div>
+        </div>
+    </div>
+
+    <div class="central control">
+            <div ng-repeat="match in selectedMatches" class="match">
+                <div class="team-box">
+                    <img src="images/{{::match.team_one_short}}.jpg" class="team-flag">
+                    <div class="team-shortname">{{::match.team_one_short}}</div>
+                </div>
+                <div class="match-details">
+                    <div class="{{::match.match_type}}">{{::match.match_type}}</div>
+                    <div class="match-time local">{{::match.start_time | uppercase}}</div>
+                </div>
+                <div class="team-box">
+                    <img src="images/{{::match.team_two_short}}.jpg" class="team-flag">
+                    <div class="team-shortname">{{::match.team_two_short}}</div>
+                </div>
+            </div>
+            <div ng-hide="selectedMatches.length">
+
+            </div>
+    </div>
+
+    <div class="teams control right">
+        <div class="pool-header pool-b">POOL B</div>
+        <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
+            <div class="team-name">{{ ::team.name }}</div>
+        </div>
+    </div>
+
+    <div id="venues" class="control">
+        <div ng-repeat="venue in ::venues" class="venue" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
+            <div class="stadium">{{ venue.stadium }}</div>
+            <div class="city">{{ venue.city }}</div>
+        </div>
+    </div>
+    <footer>© 2015 itinora</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script src="worldcup.js"></script>
+<script src="matches.svc.js"></script>
+<script>
+    function scaleWindow() {
+        var scaleX = window.innerWidth / 1920;
+        if(scaleX < 1) {
+            var bodyStyle = window.document.body.style;
+            bodyStyle.transform = bodyStyle.transform + " scaleX(" + scaleX + ")";
+        }
+        var scaleY = window.innerHeight / 1080;
+        if(scaleY < 1) {
+            var bodyStyle = window.document.body.style;
+            bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
+        }
+    }
+</script>
 </body>
 </html>
