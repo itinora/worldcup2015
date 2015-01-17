@@ -54,6 +54,10 @@ body {
     color: rgba(255, 255, 255, 0.80);
 }
 
+.f {
+    color: rgba(255, 0, 0, 0.7);;
+}
+
 .date:hover {
     color: black;
     background-color: rgba(255, 255, 255, 0.90);
@@ -229,6 +233,9 @@ body {
 .match-time.local {
     font-size: 0.8em;
 }
+.match-date {
+    font-size: 0.6em;
+}
 
 .selected {
     background-color: rgba(0, 0, 0, 0.75);
@@ -249,6 +256,27 @@ footer {
     position: absolute;
     bottom: 0;
     right: 20px;
+}
+
+.flag.sprite-AFG{ background-position: 0 0; width: 80px; height: 40px; }
+.flag.sprite-AUS{ background-position: 0 -90px; width: 80px; height: 40px; }
+.flag.sprite-BAN{ background-position: 0 -180px; width: 80px; height: 40px; }
+.flag.sprite-CAN{ background-position: 0 -270px; width: 80px; height: 40px; }
+.flag.sprite-ENG{ background-position: 0 -360px; width: 80px; height: 40px; }
+.flag.sprite-IND{ background-position: 0 -450px; width: 80px; height: 40px; }
+.flag.sprite-IRE{ background-position: 0 -540px; width: 80px; height: 40px; }
+.flag.sprite-NZ{ background-position: 0 -630px; width: 80px; height: 40px; }
+.flag.sprite-PAK{ background-position: 0 -720px; width: 80px; height: 40px; }
+.flag.sprite-SA{ background-position: 0 -810px; width: 80px; height: 40px; }
+.flag.sprite-SCO{ background-position: 0 -900px; width: 80px; height: 40px; }
+.flag.sprite-SRI{ background-position: 0 -990px; width: 80px; height: 40px; }
+.flag.sprite-TBD{ background-position: 0 -1080px; width: 80px; height: 40px; }
+.flag.sprite-UAE{ background-position: 0 -1170px; width: 80px; height: 40px; }
+.flag.sprite-WI{ background-position: 0 -1260px; width: 80px; height: 40px; }
+.flag.sprite-ZIM{ background-position: 0 -1350px; width: 80px; height: 40px; }
+
+.flag {
+    background: url(images/flags_sprite.png) no-repeat top left;
 }
 
 .footer-right a {
