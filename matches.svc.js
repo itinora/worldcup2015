@@ -14,7 +14,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '02:00 pm', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
             {
-                'city' : 'Adelaide', 'stadium': 'Adelide Oval', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
+                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
                 , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Pakistan', 'team_two_short': 'PAK', 'start_time' : '02:00 pm', 'timezone': 'Australia/Adelaide', 'pool': 'B'
             },
             {
@@ -98,7 +98,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:30 pm', 'timezone': 'Australia/Hobart', 'pool' : 'B'
             },
             {
-                'city' : 'Napier', 'stadium' : 'Mclean Park', 'match_date': '2015-03-04', 'match_day':'Wednesday', 'match_type':'DN'
+                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-04', 'match_day':'Wednesday', 'match_type':'DN'
                 , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '02:00 pm', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
             {
@@ -122,7 +122,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'Zimbabwe', 'team_one_short': 'ZIM', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:30 pm', 'timezone': 'Australia/Hobart', 'pool' : 'B'
             },
             {
-                'city' : 'Napier', 'stadium' : 'Mclean Park', 'match_date': '2015-03-08', 'match_day':'Sunday', 'match_type':'D'
+                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-08', 'match_day':'Sunday', 'match_type':'D'
                 , 'team_one_long': 'New Zealand', 'team_one_short': 'NZ', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '11:00 am', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
             },
             {
@@ -130,7 +130,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Sri Lanka', 'team_two_short': 'SRI', 'start_time' : '02:30 pm', 'timezone': 'Australia/Sydney', 'pool' : 'A'
             },
             {
-                'city' : 'Adelaide', 'stadium': 'Adelide Oval', 'match_date': '2015-03-09', 'match_day':'Monday', 'match_type':'DN'
+                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-09', 'match_day':'Monday', 'match_type':'DN'
                 , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '02:00 pm', 'timezone': 'Australia/Adelaide', 'pool' : 'A'
             },
             {
@@ -162,11 +162,11 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '02:30 pm', 'timezone': 'Australia/Hobart', 'pool' : 'A'
             },
             {
-                'city' : 'Napier', 'stadium' : 'Mclean Park', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'D'
+                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'D'
                 , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '11:00 am', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
             {
-                'city' : 'Adelaide', 'stadium': 'Adelide Oval', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'DN'
+                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'DN'
                 , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:00 pm', 'timezone': 'Australia/Adelaide', 'pool' : 'B'
             },
             {
@@ -178,7 +178,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'A2', 'team_one_short': 'A2', 'team_two_long': 'B3', 'team_two_short': 'B3', 'start_time' : '02:30 pm', 'timezone': 'Australia/Melbourne', 'pool' : 'F'
             },
             {
-                'city' : 'Adelaide', 'stadium': 'Adelide Oval', 'match_date': '2015-03-20', 'match_day':'Friday', 'match_type':'DN'
+                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-20', 'match_day':'Friday', 'match_type':'DN'
                 , 'team_one_long': 'A3', 'team_one_short': 'A3', 'team_two_long': 'B2', 'team_two_short': 'B2', 'start_time' : '02:00 pm', 'timezone': 'Australia/Adelaide', 'pool' : 'F'
             },
             {
