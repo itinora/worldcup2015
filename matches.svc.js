@@ -66,7 +66,7 @@ angular.module('worldcup2015')
             },
             {
                 'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-02-26', 'match_day':'Thursday', 'match_type':'DN'
-                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '02:30 pm', 'timezone': 'Australia/Melbourne', 'pool' : 'B'
+                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '02:30 pm', 'timezone': 'Australia/Melbourne', 'pool' : 'A'
             },
             {
                 'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-03-19', 'match_day':'Thursday', 'match_type':'DN'
@@ -213,7 +213,7 @@ angular.module('worldcup2015')
 
         this.getAllMatchDates = function() {
             return _.unique(_.sortBy(_.map(matches, function(match){
-                return {'date': match.match_date, selected: false};
+                return {'date': match.match_date, selected: false, 'pool': match.pool};
             }), 'date'), false, function(v){
                 return v.date;
             });

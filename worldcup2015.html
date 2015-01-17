@@ -8,6 +8,7 @@
     <meta name="author" content="itinora">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>Cricket World Cup 2015 Schedule</title>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet'
           type='text/css'>
     <link href="worldcup.css" rel="stylesheet">
@@ -31,7 +32,7 @@
 <div id="container" ng-controller="ScheduleCtrl">
     <div class="date-strip control">
         <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
+            <div ng-repeat="matchDate in dates" class="date {{matchDate.pool | lowercase}}"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
                 <div class="month">{{ month(matchDate.date) }}</div>
                 <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
             </div>
@@ -39,7 +40,7 @@
     </div>
 
     <div class="teams">
-        <div class="pool-header pool-a">POOL A</div>
+        <div class="pool-header pool-A">POOL A</div>
         <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
             <div class="team-name">{{ team.name }}</div>
         </div>
@@ -48,8 +49,11 @@
     <div class="central control">
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
-                    <div class="flag sprite-{{::match.team_one_short}}"></div>
-                    <div class="team-shortname">{{::match.team_one_short}}</div>
+                    <div class="pool-{{::match.pool}} left-marker"></div>
+                    <div style="margin-left: 50px">
+                        <div class="flag sprite-{{::match.team_one_short}}"></div>
+                        <div class="team-shortname">{{::match.team_one_short}}</div>
+                    </div>
                 </div>
                 <div class="match-details">
                     <div class="{{::match.match_type}}">{{::match.match_type}}</div>
@@ -66,7 +70,7 @@
     </div>
 
     <div class="teams control right">
-        <div class="pool-header pool-b">POOL B</div>
+        <div class="pool-header pool-B">POOL B</div>
         <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
             <div class="team-name">{{ ::team.name }}</div>
         </div>
@@ -81,10 +85,11 @@
 
     <footer>
         <div class="social">
-            <div class="fb-like" data-href="http://itinora.com/cricketworldcup2015.html" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora" data-size="large" data-hashtags="cricketworldcup2015">Tweet</a>
+            <div class="fb-like" data-href="http://itinora.com/cricketworldcup2015.html" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
         </div>
         <span>&copy; 2015 itinora</span>
+        <span class="footer-right">Source: <a href="https://github.com/itinora/worldcup2015">https://github.com/itinora/worldcup2015</a></span>
     </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
@@ -108,6 +113,16 @@
             bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
         }
     }
+</script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40771459-1', 'auto');
+    ga('send', 'pageview');
+
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </body>

@@ -54,6 +54,10 @@ body {
     color: rgba(255, 255, 255, 0.80);
 }
 
+.f {
+    color: rgba(255, 0, 0, 0.7);;
+}
+
 .date:hover {
     color: black;
     background-color: rgba(255, 255, 255, 0.90);
@@ -92,11 +96,11 @@ body {
     text-align: center;
 }
 
-.pool-a {
+.pool-A {
     background-color: rgb(36, 101, 36);
 }
 
-.pool-b {
+.pool-B {
     background-color: rgb(0, 119, 128);
 }
 
@@ -184,6 +188,28 @@ body {
 .team-box {
     display: inline-block;
     margin: 5px 20px;
+    width: 150px;
+}
+
+.left-marker {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-left: -70px;
+    margin-right: 60px;
+    margin-bottom: -37px;
+    border-radius: 999px;
+}
+
+.right-marker {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: -50px;
+    margin-bottom: 26px;
+    margin-top: -70px;
+    border-radius: 999px;
 }
 
 .match-details {
@@ -223,11 +249,13 @@ footer {
     position: absolute;
     bottom: 5px;
     left: 10px;
+    width: 100%;
 }
 
-.social {
-    width: 100%;
-    text-align: center;
+.footer-right {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
 }
 
 .flag.sprite-AFG{ background-position: 0 0; width: 80px; height: 40px; }
@@ -251,4 +279,32 @@ footer {
     background: url(images/flags_sprite.png) no-repeat top left;
 }
 
+.footer-right a {
+    color: rgba(255, 255, 255, 0.56);
+}
 
+a:hover {
+    color: white;
+}
+
+#twitter-widget-0 {
+    margin-bottom: -6px;
+    margin-left: 20px;
+}
+
+.social {
+    width: 252px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -18px;
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+}
