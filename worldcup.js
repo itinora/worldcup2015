@@ -1,4 +1,4 @@
-var worldcupApp  = angular.module('worldcup2015', ['angularMoment'])
+var worldcupApp  = angular.module('worldcup2015', [])
     .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
 });
@@ -9,10 +9,7 @@ worldcupApp.config(function($interpolateProvider) {
 });
 
 worldcupApp
-    .factory('jstz', function(){
-        return window.jstz;
-    })
-    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment', 'jstz', function ($scope, MatchesSvc, _, $log, moment) {
+    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', function ($scope, MatchesSvc, _, $log) {
         'use strict';
 
         $scope.dates = MatchesSvc.getAllMatchDates();

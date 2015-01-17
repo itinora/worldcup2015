@@ -33,7 +33,7 @@
     <a href="http://www.itinora.com"><img ng-src="images/itinora.png" class="logo" alt="itinora" title="itinora"></a>
     <div class="date-strip control">
         <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
+            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]" ng-click="onDateSelect(matchDate.date);"   ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
                 <div class="month">[[ month(matchDate.date) ]]</div>
                 <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
             </div>
@@ -42,7 +42,7 @@
 
     <div class="teams">
         <div class="pool-header pool-A">POOL A</div>
-        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
+        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
             <div class="team-name">[[ team.name ]]</div>
         </div>
     </div>
@@ -78,13 +78,13 @@
 
     <div class="teams control right">
         <div class="pool-header pool-B">POOL B</div>
-        <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
+        <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-click="onTeamSelect(team);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
             <div class="team-name">[[ ::team.name ]]</div>
         </div>
     </div>
 
     <div id="venues" class="control">
-        <div ng-repeat="venue in ::venues" class="venue" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
+        <div ng-repeat="venue in ::venues" class="venue" ng-click="onVenueSelect(venue);" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
             <div class="stadium">[[ venue.stadium ]]</div>
             <div class="city">[[ venue.city ]]</div>
         </div>
@@ -92,7 +92,7 @@
 
     <footer>
         <div class="social">
-            <div class="fb-like" data-href="http://itinora.com/cricketworldcup2015.html" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
+            <div class="fb-like" data-href="worldcup2015" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
             <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
         </div>
         <span>&copy; 2015 itinora</span>
@@ -100,11 +100,8 @@
     </footer>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-touch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-<script src="moment-timezone-with-data-2010-2020.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
 <script src="all.min.js"></script>
 <script>
     function scaleWindow() {
