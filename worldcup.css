@@ -220,11 +220,41 @@ footer {
     position: absolute;
     bottom: 5px;
     left: 10px;
+    width: 100%;
+}
+
+.footer-right {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.footer-right a {
+    color: rgba(255, 255, 255, 0.56);
+}
+
+a:hover {
+    color: white;
+}
+
+#twitter-widget-0 {
+    margin-bottom: -6px;
+    margin-left: 20px;
 }
 
 .social {
-    width: 100%;
-    text-align: center;
+    width: 252px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -18px;
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform-origin: bottom left;
+    -ms-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
+    -moz-transform-origin: bottom left;
+    -webkit-transform-origin: bottom left;
 }
-
-
