@@ -48,15 +48,15 @@
     <div class="central control">
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
-                    <img ng-src="images/{{::match.team_one_short}}.jpg" class="team-flag">
+                    <div class="flag sprite-{{::match.team_one_short}}"></div>
                     <div class="team-shortname">{{::match.team_one_short}}</div>
                 </div>
                 <div class="match-details">
                     <div class="{{::match.match_type}}">{{::match.match_type}}</div>
-                    <div class="match-time local">{{::match.start_time | uppercase}}</div>
+                    <div class="match-time local">{{::match.start_time}}</div>
                 </div>
                 <div class="team-box">
-                    <img ng-src="images/{{::match.team_two_short}}.jpg" class="team-flag">
+                    <div class="flag sprite-{{::match.team_two_short}}"></div>
                     <div class="team-shortname">{{::match.team_two_short}}</div>
                 </div>
             </div>
@@ -89,6 +89,10 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script src="moment-timezone-with-data-2010-2020.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
 <script src="worldcup.js"></script>
 <script src="matches.svc.js"></script>
 <script>

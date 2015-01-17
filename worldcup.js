@@ -1,8 +1,10 @@
-angular.module('worldcup2015', [])
+angular.module('worldcup2015', ['angularMoment'])
     .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
-})
-.controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', function ($scope, MatchesSvc, _, $log) {
+}).factory('jstz', function(){
+        return window.jstz;
+    })
+.controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment', 'jstz',  function ($scope, MatchesSvc, _, $log, moment) {
         'use strict';
 
         $scope.dates = MatchesSvc.getAllMatchDates();
