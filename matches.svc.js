@@ -134,7 +134,7 @@ angular.module('worldcup2015')
             },
             {
                 'city' : 'Christchurch', 'stadium' : 'Hagley Oval', 'match_date': '2015-02-23', 'match_day':'Monday', 'match_type':'D'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '11:00 am', 'timezone': 'New Zealand/Christchurch', 'pool' : 'A'
+                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'timezone': 'New Zealand/Christchurch', 'pool' : 'A'
             },
             {
                 'city' : 'Dunedin', 'stadium' : 'University Oval', 'match_date': '2015-02-17', 'match_day':'Tuesday', 'match_type':'D'
