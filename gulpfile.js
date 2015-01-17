@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var watch = require('gulp-watch');
+var ngAnnotate = require('gulp-ng-annotate');
 
 var sourceFiles = [
     './worldcup.js',
@@ -16,6 +17,7 @@ gulp.task('concat', function() {
 
 gulp.task('minify', function () {
     gulp.src(sourceFiles)
+    .pipe(ngAnnotate())
     .pipe(concat('all.min.js'))
     .pipe(uglify({mangle:true}))
     .pipe(gulp.dest('./'))
