@@ -30,6 +30,7 @@
 <div class="bg"></div>
 
 <div id="container" ng-controller="ScheduleCtrl">
+    <a href="http://www.itinora.com"><img ng-src="images/itinora.png" class="logo" alt="itinora" title="itinora"></a>
     <div class="date-strip control">
         <div id="dates">
             <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
