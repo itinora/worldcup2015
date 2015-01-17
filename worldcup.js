@@ -2,7 +2,7 @@ angular.module('worldcup2015', [])
     .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
 })
-.controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', function ($scope, MatchesSvc, _) {
+.controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', function ($scope, MatchesSvc, _, $log) {
         'use strict';
 
         $scope.dates = MatchesSvc.getAllMatchDates();
@@ -19,7 +19,22 @@ angular.module('worldcup2015', [])
             $scope.deselectAll();
 
             $scope.selectedMatches = MatchesSvc.getMatchesForDate(date);
+            highlightTeamsForSelectedMatches();
+            highlightVenuesForSelectedMatches();
+        };
 
+        var highlightDatesForSelectedMatches = function() {
+            $scope.dates = _.map($scope.dates, function(date) {
+                _.each($scope.selectedMatches, function(match) {
+                    if(match.match_date === date.date) {
+                        date.selected = true;
+                    }
+                });
+                return date;
+            });
+        };
+
+        var highlightTeamsForSelectedMatches = function() {
             $scope.teams = _.map($scope.teams, function(team) {
                 _.each($scope.selectedMatches, function(match) {
                     if(match.team_one_long === team.name || match.team_two_long === team.name) {
@@ -28,7 +43,9 @@ angular.module('worldcup2015', [])
                 });
                 return team;
             });
+        };
 
+        var highlightVenuesForSelectedMatches = function() {
             $scope.venues = _.map($scope.venues, function(venue) {
                 _.each($scope.selectedMatches, function(match) {
                     if(match.city === venue.city) {
@@ -37,10 +54,7 @@ angular.module('worldcup2015', [])
                 });
                 return venue;
             });
-
-
         };
-
         $scope.onDateDeselect = function(date) {
             for(var i= 0, team; team = $scope.teams[i];i++) {
                 team.selected = false;
@@ -75,22 +89,15 @@ angular.module('worldcup2015', [])
         $scope.onTeamSelect = function(team) {
             $scope.deselectAll();
             $scope.selectedMatches = MatchesSvc.getMatchesForTeam(team);
-            //$scope.dates[2].selected = true;
-            //$scope.dates[4].selected = true;
-            //$scope.venues[5].selected = true;
-            //$scope.venues[9].selected = true;
+            highlightDatesForSelectedMatches();
+            highlightVenuesForSelectedMatches();
         };
 
         $scope.onVenueSelect = function(venue) {
             $scope.deselectAll();
             $scope.selectedMatches = MatchesSvc.getMatchesForVenue(venue);
-
-            //$scope.dates[0].selected = true;
-            //$scope.dates[1].selected = true;
-            //$scope.dates[5].selected = true;
-            //$scope.teams[4].selected = true;
-            //$scope.teams[8].selected = true;
-            //$scope.teams[11].selected = true;
+            highlightDatesForSelectedMatches();
+            highlightTeamsForSelectedMatches();
         };
 
         $scope.deselectAll = function() {
