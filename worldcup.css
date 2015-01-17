@@ -8,7 +8,7 @@ body {
 }
 
 .bg {
-    background-image: url("bg.jpg");
+    background-image: url("images/bg.jpg");
     background-size: cover;
     /*-webkit-filter: blur(2px);*/
     /*-moz-filter: blur(2px);*/

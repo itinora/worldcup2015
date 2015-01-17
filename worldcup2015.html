@@ -32,9 +32,9 @@
 <div id="container" ng-controller="ScheduleCtrl">
     <div class="date-strip control">
         <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date {{matchDate.pool | lowercase}}"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
-                <div class="month">{{ month(matchDate.date) }}</div>
-                <div class="dateOfMonth">{{ dateOfMonth(matchDate.date) }}</div>
+            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]"  ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
+                <div class="month">[[ month(matchDate.date) ]]</div>
+                <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
             </div>
         </div>
     </div>
@@ -42,44 +42,46 @@
     <div class="teams">
         <div class="pool-header pool-A">POOL A</div>
         <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
-            <div class="team-name">{{ team.name }}</div>
+            <div class="team-name">[[ team.name ]]</div>
         </div>
     </div>
 
     <div class="central control">
+        <div style="margin-top: -20px;">
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
-                    <div class="pool-{{::match.pool}} left-marker"></div>
+                    <div class="pool-[[::match.pool]] left-marker"></div>
                     <div style="margin-left: 50px">
-                        <div class="flag sprite-{{::match.team_one_short}}"></div>
-                        <div class="team-shortname">{{::match.team_one_short}}</div>
+                        <img ng-src="images/[[::match.team_one_short]].jpg" class="team-flag">
+                        <div class="team-shortname">[[::match.team_one_short]]</div>
                     </div>
                 </div>
                 <div class="match-details">
-                    <div class="{{::match.match_type}}">{{::match.match_type}}</div>
-                    <div class="match-time local">{{::match.start_time}}</div>
+                    <div class="[[::match.match_type]]">[[::match.match_type]]</div>
+                    <div class="match-time local">[[::match.start_time | uppercase]]</div>
                 </div>
                 <div class="team-box">
-                    <div class="flag sprite-{{::match.team_two_short}}"></div>
-                    <div class="team-shortname">{{::match.team_two_short}}</div>
+                    <img ng-src="images/[[::match.team_two_short]].jpg" class="team-flag">
+                    <div class="team-shortname">[[::match.team_two_short]]</div>
                 </div>
             </div>
             <div ng-hide="selectedMatches.length">
 
             </div>
+        </div>
     </div>
 
     <div class="teams control right">
         <div class="pool-header pool-B">POOL B</div>
         <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
-            <div class="team-name">{{ ::team.name }}</div>
+            <div class="team-name">[[ ::team.name ]]</div>
         </div>
     </div>
 
     <div id="venues" class="control">
         <div ng-repeat="venue in ::venues" class="venue" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
-            <div class="stadium">{{ venue.stadium }}</div>
-            <div class="city">{{ venue.city }}</div>
+            <div class="stadium">[[ venue.stadium ]]</div>
+            <div class="city">[[ venue.city ]]</div>
         </div>
     </div>
 
@@ -98,8 +100,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 <script src="moment-timezone-with-data-2010-2020.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
-<script src="worldcup.js"></script>
-<script src="matches.svc.js"></script>
+<script src="all.min.js"></script>
 <script>
     function scaleWindow() {
         var scaleX = window.innerWidth / 1920;
