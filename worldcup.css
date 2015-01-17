@@ -92,11 +92,11 @@ body {
     text-align: center;
 }
 
-.pool-a {
+.pool-A {
     background-color: rgb(36, 101, 36);
 }
 
-.pool-b {
+.pool-B {
     background-color: rgb(0, 119, 128);
 }
 
@@ -184,6 +184,28 @@ body {
 .team-box {
     display: inline-block;
     margin: 5px 20px;
+    width: 150px;
+}
+
+.left-marker {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-left: -70px;
+    margin-right: 60px;
+    margin-bottom: -37px;
+    border-radius: 999px;
+}
+
+.right-marker {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: -50px;
+    margin-bottom: 26px;
+    margin-top: -70px;
+    border-radius: 999px;
 }
 
 .match-details {
