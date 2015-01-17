@@ -118,3 +118,11 @@ body {
 .city {
   font-size: 1em;
 }
+
+.footer {
+    background: rgba(238, 238, 85, 0);
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+}

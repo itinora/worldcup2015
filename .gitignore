@@ -1,8 +1,7 @@
 .idea
 node_modules/
 bower_components/
-*.log
-.iml
+.log
 .DS_Store
 
 build/
