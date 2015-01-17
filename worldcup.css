@@ -55,7 +55,7 @@ body {
 }
 
 .f {
-    color: rgba(255, 0, 0, 0.7);;
+    color: rgba(255, 178, 178, 0.89);
 }
 
 .date:hover {
@@ -168,7 +168,7 @@ body {
 .match {
     font-size: 1.8em;
     font-weight: 300;
-    padding: 18px 10px 10px 10px;
+    padding: 18px 10px 10px 0px;
     height: 50px;
     color: rgba(255, 255, 255, 0.56);
     margin-bottom: 3px;
@@ -196,7 +196,7 @@ body {
     width: 30px;
     display: inline-block;
     margin-left: -70px;
-    margin-right: 60px;
+    margin-right: 0px;
     margin-bottom: -37px;
     border-radius: 999px;
 }
@@ -214,7 +214,7 @@ body {
 
 .match-details {
     display: inline-block;
-    width: 100px;
+    width: 200px;
     position: relative;
     top: -20px;
 }
@@ -230,9 +230,20 @@ body {
     display: none;
 }
 
+.match-month {
+    font-size: 0.6em;
+    display: inline-block;
+}
+
 .match-time.local {
     font-size: 0.8em;
+    display: inline-block;
 }
+
+.match-venue {
+    font-size: 0.8em;
+}
+
 .match-date {
     font-size: 0.6em;
 }

@@ -51,16 +51,20 @@
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
                     <div class="pool-[[::match.pool]] left-marker"></div>
-                    <div style="margin-left: 50px">
+                    <div style="margin-left: 90px">
                         <img ng-src="images/[[::match.team_one_short]].jpg" class="team-flag">
                         <div class="team-shortname">[[::match.team_one_short]]</div>
                     </div>
                 </div>
                 <div class="match-details">
-                    <div class="[[::match.match_type]]">[[::match.match_type]]</div>
-                    <div class="match-time local">[[::match.start_time | uppercase]]</div>
+                    <div>
+                        <div class="match-month">[[month(match.match_date)]] [[dateOfMonth(match.match_date)]]</div>
+                        <div class="match-time local">[[::match.start_time | uppercase]]</div>
+                        <div class="[[::match.match_type]]">[[::match.match_type]]</div>
+                    </div>
+                    <div class="match-venue">[[::match.city | uppercase]]</div>
                 </div>
-                <div class="team-box">
+                <div class="team-box" style="margin-left:-20px;">
                     <img ng-src="images/[[::match.team_two_short]].jpg" class="team-flag">
                     <div class="team-shortname">[[::match.team_two_short]]</div>
                 </div>
