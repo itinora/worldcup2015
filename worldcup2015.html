@@ -40,7 +40,7 @@
     </div>
 
     <div class="teams">
-        <div class="pool-header pool-a">POOL A</div>
+        <div class="pool-header pool-A">POOL A</div>
         <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
             <div class="team-name">{{ team.name }}</div>
         </div>
@@ -49,8 +49,11 @@
     <div class="central control">
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
-                    <img ng-src="images/{{::match.team_one_short}}.jpg" class="team-flag">
-                    <div class="team-shortname">{{::match.team_one_short}}</div>
+                    <div class="pool-{{::match.pool}} left-marker"></div>
+                    <div style="margin-left: 50px">
+                        <img ng-src="images/{{::match.team_one_short}}.jpg" class="team-flag">
+                        <div class="team-shortname">{{::match.team_one_short}}</div>
+                    </div>
                 </div>
                 <div class="match-details">
                     <div class="{{::match.match_type}}">{{::match.match_type}}</div>
@@ -67,7 +70,7 @@
     </div>
 
     <div class="teams control right">
-        <div class="pool-header pool-b">POOL B</div>
+        <div class="pool-header pool-B">POOL B</div>
         <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
             <div class="team-name">{{ ::team.name }}</div>
         </div>
