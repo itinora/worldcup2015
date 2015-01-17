@@ -47,6 +47,7 @@
     </div>
 
     <div class="central control">
+        <div style="margin-top: -20px;">
             <div ng-repeat="match in selectedMatches" class="match">
                 <div class="team-box">
                     <div class="pool-{{::match.pool}} left-marker"></div>
@@ -67,6 +68,7 @@
             <div ng-hide="selectedMatches.length">
 
             </div>
+        </div>
     </div>
 
     <div class="teams control right">
@@ -98,8 +100,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
 <script src="moment-timezone-with-data-2010-2020.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.9.0/angular-moment.min.js"></script>
-<script src="worldcup.js"></script>
-<script src="matches.svc.js"></script>
+<script src="all.min.js"></script>
 <script>
     function scaleWindow() {
         var scaleX = window.innerWidth / 1920;
