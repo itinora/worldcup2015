@@ -116,11 +116,9 @@ worldcupApp
         };
 
         $scope.deselectAll = function() {
-            if($scope.staySelected) {
-                return;
+            if(!$scope.staySelected) {
+                $scope.selectedMatches = {};
             }
-
-            $scope.selectedMatches = {};
 
             for(var i= 0, date; date = $scope.dates[i];i++) {
                 date.selected = false;

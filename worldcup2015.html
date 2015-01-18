@@ -109,11 +109,13 @@
         if(scaleX < 1) {
             var bodyStyle = window.document.body.style;
             bodyStyle.transform = bodyStyle.transform + " scaleX(" + scaleX + ")";
+            bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleX(" + scaleX + ")";
         }
         var scaleY = window.innerHeight / 1080;
         if(scaleY < 1) {
             var bodyStyle = window.document.body.style;
             bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
+            bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleY(" + scaleY + ")";
         }
     }
 </script>

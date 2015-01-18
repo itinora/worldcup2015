@@ -2,6 +2,8 @@ body {
     font: 100%/1.5em 'Roboto', Arial, Geneva, sans-serif !important;
     margin: 0;
     padding: 0;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
     transform-origin: top left;
     background-color: #42420c;
     overflow: hidden;
