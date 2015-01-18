@@ -22,7 +22,12 @@ worldcupApp
         };
 
         $scope.selectedMatches = {};
-        $scope.onDateSelect = function(date) {
+        $scope.onDateSelect = function(date, staySelected) {
+            staySelected = staySelected || false;
+            if(!$scope.staySelected && staySelected) {
+                $scope.staySelected = true;
+            }
+
             $scope.deselectAll();
 
             $scope.selectedMatches = MatchesSvc.getMatchesForDate(date);
@@ -62,11 +67,6 @@ worldcupApp
                 return venue;
             });
         };
-        $scope.onDateDeselect = function(date) {
-            for(var i= 0, team; team = $scope.teams[i];i++) {
-                team.selected = false;
-            }
-        };
 
         $scope.teams = [
             {'name': 'England', 'pool': 'A', 'selected': false},
@@ -93,14 +93,22 @@ worldcupApp
             }
             return result;
         };
-        $scope.onTeamSelect = function(team) {
+        $scope.onTeamSelect = function(team, staySelected) {
+            staySelected = staySelected || false;
+            if(!$scope.staySelected && staySelected) {
+                $scope.staySelected = true;
+            }
             $scope.deselectAll();
             $scope.selectedMatches = MatchesSvc.getMatchesForTeam(team);
             highlightDatesForSelectedMatches();
             highlightVenuesForSelectedMatches();
         };
 
-        $scope.onVenueSelect = function(venue) {
+        $scope.onVenueSelect = function(venue, staySelected) {
+            staySelected = staySelected || false;
+            if(!$scope.staySelected && staySelected) {
+                $scope.staySelected = true;
+            }
             $scope.deselectAll();
             $scope.selectedMatches = MatchesSvc.getMatchesForVenue(venue);
             highlightDatesForSelectedMatches();
@@ -108,7 +116,9 @@ worldcupApp
         };
 
         $scope.deselectAll = function() {
-            $scope.selectedMatches = {};
+            if(!$scope.staySelected) {
+                $scope.selectedMatches = {};
+            }
 
             for(var i= 0, date; date = $scope.dates[i];i++) {
                 date.selected = false;
