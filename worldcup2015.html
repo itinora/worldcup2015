@@ -31,25 +31,9 @@
 
 <div id="container" ng-controller="ScheduleCtrl">
     <a href="http://www.itinora.com"><img ng-src="images/itinora.png" class="logo" alt="itinora" title="itinora"></a>
-    <div class="date-strip control">
-        <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]" ng-click="onDateSelect(matchDate.date, true);"   ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
-                <div class="month">[[ month(matchDate.date) ]]</div>
-                <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="teams">
-        <div class="pool-header pool-A">POOL A</div>
-        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
-            <div class="team-name">[[ team.name ]]</div>
-        </div>
-    </div>
-
     <div class="central control">
-        <div style="margin-top: -20px;">
-            <div ng-repeat="match in selectedMatches" class="match">
+        <div class="matches" >
+            <div ng-repeat="match in selectedMatches" class="match" >
                 <div class="team-box">
                     <div class="pool-[[::match.pool]] left-marker"></div>
                     <div style="margin-left: 90px">
@@ -76,28 +60,46 @@
         </div>
     </div>
 
-    <div class="teams control right">
-        <div class="pool-header pool-B">POOL B</div>
-        <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
-            <div class="team-name">[[ ::team.name ]]</div>
+    <div class="cockpit">
+        <div class="date-strip control">
+            <div id="dates">
+                <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]" ng-click="onDateSelect(matchDate.date, true);"   ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
+                    <div class="month">[[ month(matchDate.date) ]]</div>
+                    <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div id="venues" class="control">
-        <div ng-repeat="venue in ::venues" class="venue" ng-click="onVenueSelect(venue, true);" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
-            <div class="stadium">[[ venue.stadium ]]</div>
-            <div class="city">[[ venue.city ]]</div>
+        <div class="teams">
+            <div class="pool-header pool-A">POOL A</div>
+            <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
+                <div class="team-name">[[ team.name ]]</div>
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <div class="social">
-            <div class="fb-like" data-href="worldcup2015" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
+        <div class="teams control right">
+            <div class="pool-header pool-B">POOL B</div>
+            <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
+                <div class="team-name">[[ ::team.name ]]</div>
+            </div>
         </div>
-        <span>&copy; 2015 itinora</span>
-        <span class="footer-right">Source: <a href="https://github.com/itinora/worldcup2015">https://github.com/itinora/worldcup2015</a></span>
-    </footer>
+
+        <div id="venues" class="control">
+            <div ng-repeat="venue in ::venues" class="venue" ng-click="onVenueSelect(venue, true);" ng-mouseover="onVenueSelect(venue);" ng-mouseleave="deselectAll();" ng-class="{selected: venue.selected}">
+                <div class="stadium">[[ venue.stadium ]]</div>
+                <div class="city">[[ venue.city ]]</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="social">
+                <div class="fb-like" data-href="worldcup2015" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
+            </div>
+            <span class="copyright">&copy; 2015 itinora</span>
+            <span class="footer-right source">Source: <a href="https://github.com/itinora/worldcup2015">https://github.com/itinora/worldcup2015</a></span>
+        </footer>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-touch.js"></script>
@@ -105,17 +107,76 @@
 <script src="all.min.js"></script>
 <script>
     function scaleWindow() {
-        var scaleX = window.innerWidth / 1920;
-        if(scaleX < 1) {
-            var bodyStyle = window.document.body.style;
-            bodyStyle.transform = bodyStyle.transform + " scaleX(" + scaleX + ")";
-            bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleX(" + scaleX + ")";
-        }
-        var scaleY = window.innerHeight / 1080;
-        if(scaleY < 1) {
-            var bodyStyle = window.document.body.style;
-            bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
-            bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleY(" + scaleY + ")";
+        if( window.innerWidth > window.innerHeight) {
+            var scaleX = window.innerWidth / 1920;
+            if (scaleX < 1) {
+                var bodyStyle = window.document.body.style;
+                bodyStyle.transform = bodyStyle.transform + " scaleX(" + scaleX + ")";
+                bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleX(" + scaleX + ")";
+            }
+            var scaleY = window.innerHeight / 1080;
+            if (scaleY < 1) {
+                var bodyStyle = window.document.body.style;
+                bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
+                bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleY(" + scaleY + ")";
+            }
+            window.mobile = false;
+        } else {
+            //mobile portrait devices
+            window.mobile = true;
+            document.getElementsByClassName('central')[0].className += " mobile";
+            document.getElementsByClassName('cockpit')[0].className += " mobile";
+            var scale = (window.innerHeight / 2) / 500;
+            if(window.innerWidth < 790) { //width of central matches
+                scale = window.innerWidth / 790;
+            }
+            document.getElementById('container').style.width = window.innerWidth + "px";
+            document.getElementsByClassName('bg')[0].style.width = window.innerWidth + "px";
+            document.getElementsByClassName('central')[0].style.transform = document.getElementsByClassName('central')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
+            document.getElementsByClassName('central')[0].style.width = window.innerWidth/scale + "px";
+
+            document.getElementsByClassName('cockpit')[0].style.top = (document.getElementsByClassName('central')[0].offsetHeight*scale) + 'px';
+            document.getElementsByClassName('cockpit')[0].style.width = window.innerWidth + 'px';
+            document.getElementsByClassName('cockpit')[0].style.height = (window.innerHeight - document.getElementsByClassName('central')[0].offsetHeight*scale) + 'px';
+
+            document.getElementsByClassName('date-strip')[0].style.position = "relative";
+            document.getElementsByClassName('date-strip')[0].style.height = "240px";
+            document.getElementsByClassName('date-strip')[0].style.width = (window.innerWidth/scale - 20 )+ "px";
+            document.getElementsByClassName('date-strip')[0].style.top = '0px';
+            document.getElementsByClassName('date-strip')[0].style.marginTop = '10px';
+            document.getElementsByClassName('date-strip')[0].style.transform = document.getElementsByClassName('date-strip')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
+            document.getElementById('dates').style.width = (window.innerWidth/scale - 20) + "px";
+            document.getElementById('dates').style.left = 0;
+            document.getElementById('dates').style.top = 0;
+
+            document.getElementsByClassName('teams')[0].style.width = "300px";
+            document.getElementsByClassName('teams')[1].style.width = "300px";
+            var teamScale = (window.innerWidth - 20)/600;
+            document.getElementsByClassName('teams')[0].style.top = 0;
+            document.getElementsByClassName('teams')[1].style.top = 0;
+            document.getElementsByClassName('teams')[0].style.marginTop = (document.getElementsByClassName('date-strip')[0].offsetHeight * scale + 20) + "px";
+            document.getElementsByClassName('teams')[1].style.marginTop = (document.getElementsByClassName('date-strip')[0].offsetHeight * scale + 20) + "px";
+            document.getElementsByClassName('teams')[1].style.left = (300*teamScale) + 'px';
+            document.getElementsByClassName('teams')[1].style.right = '0px';
+            document.getElementsByClassName('teams')[0].style.transform = document.getElementsByClassName('teams')[0].style.transform + " scaleX(" + teamScale + ") scaleY(" + teamScale + ")";
+            document.getElementsByClassName('teams')[1].style.transform = document.getElementsByClassName('teams')[1].style.transform + " scaleX(" + teamScale + ") scaleY(" + teamScale + ")";
+
+            document.getElementById('venues').style.width = window.innerWidth/scale + "px";
+            document.getElementById('venues').style.height = "210px";
+            document.getElementById('venues').style.top = '0px';
+            document.getElementById('venues').style.marginTop = (document.getElementsByClassName('teams')[0].offsetHeight*teamScale + 10) + (document.getElementsByClassName('date-strip')[0].offsetHeight * scale + 20) + "px";
+            document.getElementById('venues').style.transform = document.getElementById('venues').style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
+
+            document.getElementsByTagName('footer')[0].style.position = 'relative';
+            document.getElementsByTagName('footer')[0].style.marginTop = (document.getElementsByClassName('teams')[0].offsetHeight*teamScale + 10) + (document.getElementsByClassName('date-strip')[0].offsetHeight * scale) + "px";
+            document.getElementsByClassName('social')[0].style.width = window.innerWidth + 'px';
+            document.getElementsByClassName('social')[0].style.height = "40px";
+            document.getElementsByClassName('social')[0].style.left = "0px";
+            document.getElementsByClassName('copyright')[0].style.display = "block";
+            document.getElementsByClassName('copyright')[0].style.height = "30px";
+            document.getElementsByClassName('source')[0].style.display = "block";
+            document.getElementsByClassName('source')[0].style.position = "relative";
+            document.getElementsByClassName('source')[0].style.left = "0";
         }
     }
 </script>
