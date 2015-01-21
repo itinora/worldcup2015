@@ -132,6 +132,7 @@
             }
             document.getElementById('container').style.width = window.innerWidth + "px";
             document.getElementsByClassName('bg')[0].style.width = window.innerWidth + "px";
+            document.getElementsByClassName('logo')[0].style.display = "none";
             document.getElementsByClassName('central')[0].style.transform = document.getElementsByClassName('central')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
             document.getElementsByClassName('central')[0].style.width = window.innerWidth/scale + "px";
 
@@ -141,7 +142,7 @@
 
             document.getElementsByClassName('date-strip')[0].style.position = "relative";
             document.getElementsByClassName('date-strip')[0].style.height = "240px";
-            document.getElementsByClassName('date-strip')[0].style.width = (window.innerWidth/scale - 20 )+ "px";
+            document.getElementsByClassName('date-strip')[0].style.width = window.innerWidth/scale + "px";
             document.getElementsByClassName('date-strip')[0].style.top = '0px';
             document.getElementsByClassName('date-strip')[0].style.marginTop = '10px';
             document.getElementsByClassName('date-strip')[0].style.transform = document.getElementsByClassName('date-strip')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
@@ -151,7 +152,7 @@
 
             document.getElementsByClassName('teams')[0].style.width = "300px";
             document.getElementsByClassName('teams')[1].style.width = "300px";
-            var teamScale = (window.innerWidth - 20)/600;
+            var teamScale = window.innerWidth/600;
             document.getElementsByClassName('teams')[0].style.top = 0;
             document.getElementsByClassName('teams')[1].style.top = 0;
             document.getElementsByClassName('teams')[0].style.marginTop = (document.getElementsByClassName('date-strip')[0].offsetHeight * scale + 20) + "px";
@@ -163,6 +164,7 @@
 
             document.getElementById('venues').style.width = window.innerWidth/scale + "px";
             document.getElementById('venues').style.height = "210px";
+            document.getElementById('venues').style.marginLeft = 0;
             document.getElementById('venues').style.top = '0px';
             document.getElementById('venues').style.marginTop = (document.getElementsByClassName('teams')[0].offsetHeight*teamScale + 10) + (document.getElementsByClassName('date-strip')[0].offsetHeight * scale + 20) + "px";
             document.getElementById('venues').style.transform = document.getElementById('venues').style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";

@@ -10,7 +10,7 @@ body {
 }
 
 .bg {
-    background: url("images/bg.jpg") no-repeat center;
+    background: url(images/bg.jpg) no-repeat scroll center;
     background-size: cover;
     /*-webkit-filter: blur(2px);*/
     /*-moz-filter: blur(2px);*/
@@ -39,6 +39,8 @@ body {
     display: inline-block;
     margin-left: 20px;
     margin-top: 20px;
+    z-index: 1000;
+    position: relative;
 }
 
 .date-strip {
@@ -261,6 +263,7 @@ body {
     width: 200px;
     position: relative;
     top: -20px;
+    color: #ffffff;
 }
 
 .DN {
