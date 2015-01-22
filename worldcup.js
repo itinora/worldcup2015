@@ -1,7 +1,10 @@
 var worldcupApp  = angular.module('worldcup2015', [])
     .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
-});
+    })
+    .factory('moment', function() {
+        return window.moment;
+    });
 
 worldcupApp.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
@@ -9,8 +12,13 @@ worldcupApp.config(function($interpolateProvider) {
 });
 
 worldcupApp
-    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', function ($scope, MatchesSvc, _, $log) {
+    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment',  function ($scope, MatchesSvc, _, $log, moment) {
         'use strict';
+
+        $scope.timeFlag = false;
+        $scope.toggleTimeFlag = function() {
+            $scope.timeFlag = !$scope.timeFlag;
+        }
 
         $scope.dates = MatchesSvc.getAllMatchDates();
 
@@ -20,6 +28,16 @@ worldcupApp
         $scope.dateOfMonth = function(date) {
             return date.substr(8,2);
         };
+
+        $scope.getTime = function(match) {
+            if ($scope.timeFlag) {
+                return $scope.month(match.match_date).toUpperCase()
+                    + " " + $scope.dateOfMonth(match.match_date).toUpperCase()
+                    + " " + match.start_time.toUpperCase();
+            } else {
+                return moment(match.match_datetime).format("MMM DD hh:mm A").toUpperCase();
+            }
+        }
 
         $scope.selectedMatches = {};
         $scope.onDateSelect = function(date, staySelected) {
