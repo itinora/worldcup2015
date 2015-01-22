@@ -10,7 +10,7 @@ body {
 }
 
 .bg {
-    background-image: url("images/bg.jpg");
+    background: url(images/bg.jpg) no-repeat scroll center;
     background-size: cover;
     /*-webkit-filter: blur(2px);*/
     /*-moz-filter: blur(2px);*/
@@ -39,12 +39,18 @@ body {
     display: inline-block;
     margin-left: 20px;
     margin-top: 20px;
+    z-index: 1000;
+    position: relative;
 }
 
 .date-strip {
     width: 100%;
     height: 240px;
     margin-top: -60px;
+    position: absolute;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: top left;
 }
 
 #dates {
@@ -93,6 +99,9 @@ body {
     width: 500px;
     position: absolute;
     top: 310px;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: top left;
 }
 
 .right {
@@ -142,6 +151,9 @@ body {
     left: 0px;
     width: 101%;
     margin-left: -3px;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: top left;
 }
 
 .venue {
@@ -178,6 +190,16 @@ body {
     background-color: rgba(0, 0, 0, 0.65) !important;
 }
 
+.central.mobile {
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: top left;
+}
+
 .match {
     font-size: 1.8em;
     font-weight: 300;
@@ -188,6 +210,16 @@ body {
     width: 780px;
     text-align: center;
     color: #ffffff;
+}
+
+.matches {
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 790px;
+    -ms-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: top left;
 }
 
 .team-flag {
@@ -231,6 +263,7 @@ body {
     width: 200px;
     position: relative;
     top: -20px;
+    color: #ffffff;
 }
 
 .DN {
@@ -332,4 +365,10 @@ a:hover {
     -webkit-transform-origin: bottom left;
     -moz-transform-origin: bottom left;
     -webkit-transform-origin: bottom left;
+}
+
+.cockpit.mobile {
+    position: absolute;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
