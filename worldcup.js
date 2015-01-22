@@ -1,16 +1,50 @@
 var worldcupApp  = angular.module('worldcup2015', [])
     .factory('_', function() {
         return window._; // assumes underscore has already been loaded on the page
-});
-
+    })
+    .factory('moment', function() {
+        return window.moment;
+    });
+//worldcupApp.service('tzdetect', ['moment', function() {
+//    this.names = moment.tz.names();
+//    this.matches =  function(base){
+//        var results = [], now = Date.now(), makekey = function(id){
+//            return [0, 4, 8, -5*12, 4-5*12, 8-5*12, 4-2*12, 8-2*12].map(function(months){
+//                var m = moment(now + months*30*24*60*60*1000);
+//                if (id) m.tz(id);
+//                return m.format("DDHHmm");
+//            }).join(' ');
+//        }, lockey = makekey(base);
+//        this.names.forEach(function(id){
+//            if (makekey(id)===lockey) results.push(id);
+//        });
+//        return results;
+//    }
+//}]);
 worldcupApp.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
 });
 
+// , 'match_datetime': '2015-02-14T11:00+13:00','timezone': 'Pacific/Auckland'
+// , 'match_datetime': '2015-02-14T14:30+11:00', 'timezone': 'Australia/Melbourne', Hobart, Sydney
+// , 'match_datetime': '2015-02-15T14:00+10:30', 'timezone': 'Australia/Adelaide'
+// , 'match_datetime': '2015-02-14T13:30+10:00', 'timezone': 'Australia/Brisbane'
+// , 'match_datetime': '2015-03-04T14:30+08:00', 'timezone': 'Australia/Perth'
+
 worldcupApp
-    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', function ($scope, MatchesSvc, _, $log) {
+    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment',  function ($scope, MatchesSvc, _, $log, moment) {
         'use strict';
+
+        //moment.tz.setDefault(match.timezone);
+        //var userLocal = moment("2015-02-15T14:00+10:30");
+        //$log.log(userLocal.format());
+        //$log.log(userLocal.tz("Australia/Adelaide").format());
+        //var userLocal = venueLocal.tz(tzdetect.matches()[0]).format('ha z');;
+        $scope.timeFlag = false;
+        $scope.toggleTimeFlag = function() {
+            $scope.timeFlag = !$scope.timeFlag;
+        }
 
         $scope.dates = MatchesSvc.getAllMatchDates();
 
@@ -20,6 +54,16 @@ worldcupApp
         $scope.dateOfMonth = function(date) {
             return date.substr(8,2);
         };
+
+        $scope.getTime = function(match) {
+            if ($scope.timeFlag) {
+                return $scope.month(match.match_date).toUpperCase()
+                    + " " + $scope.dateOfMonth(match.match_date).toUpperCase()
+                    + " " + match.start_time.toUpperCase();
+            } else {
+                return moment(match.match_datetime).format("MMM DD HH:mm A").toUpperCase();
+            }
+        }
 
         $scope.selectedMatches = {};
         $scope.onDateSelect = function(date, staySelected) {
