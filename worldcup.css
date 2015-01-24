@@ -12,11 +12,6 @@ body {
 .bg {
     background: url(images/bg.jpg) no-repeat scroll center;
     background-size: cover;
-    /*-webkit-filter: blur(2px);*/
-    /*-moz-filter: blur(2px);*/
-    /*-o-filter: blur(2px);*/
-    /*-ms-filter: blur(2px);*/
-    /*filter: blur(2px);*/
     height: 1080px;
     width: 1920px;
     margin: -1px;
@@ -41,6 +36,48 @@ body {
     margin-top: 20px;
     z-index: 1000;
     position: relative;
+}
+
+.timezone {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 900;
+    color: rgba(255, 255, 255, 0.80);
+    margin: 0;
+}
+
+.toggle-button {
+    height: 30px;
+    background-color: #219161;
+    outline: none;
+    color: #1d754b;
+    cursor: pointer;
+    border-bottom-color: #219161;
+    border-top-color: #53AD89;
+}
+
+.toggle-button:hover {
+    color: #ffffff;
+}
+
+.toggle-button.left {
+    border-radius: 5px 0 0 5px;
+    border-left-color: #53AD89;
+}
+
+.toggle-button.right {
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
+    border-right-color: #53AD89;
+    border-left-color: #53AD89;
+}
+
+.toggle-button:disabled {
+    color: #696969;
+    background-color: lightgray;
+    border-color: transparent;
+    cursor: default;
 }
 
 .date-strip {
@@ -283,12 +320,12 @@ body {
 }
 
 .match-time.local {
-    font-size: 0.4em;
+    font-size: 0.7em;
     display: inline-block;
 }
 
 .match-venue {
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 
 .match-date {

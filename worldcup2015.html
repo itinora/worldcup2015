@@ -40,21 +40,12 @@
 
 <div id="container" ng-controller="ScheduleCtrl">
     <a href="http://www.itinora.com"><img ng-src="images/itinora.png" class="logo" alt="itinora" title="itinora"></a>
-    <div class="date-strip control">
-        <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]" ng-click="onDateSelect(matchDate.date, true);"   ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
-                <div class="month">[[ month(matchDate.date) ]]</div>
-                <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
-            </div>
-        </div>
+    <div class="timezone" >
+        <div>Time zone</div>
+        <button ng-click="toggleTimeFlag()" class="toggle-button left" ng-disabled="!timeFlag">My Location</button>
+        <button ng-click="toggleTimeFlag()" class="toggle-button right" ng-disabled="timeFlag">Venue</button>
     </div>
 
-    <div class="teams">
-        <div class="pool-header pool-A">POOL A</div>
-        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
-            <div class="team-name">[[ team.name ]]</div>
-        </div>
-    </div>
     <div class="central control">
         <div class="matches" >
             <div ng-repeat="match in selectedMatches" class="match" >
@@ -114,7 +105,6 @@
         </div>
 
         <footer>
-            <button ng-click="toggleTimeFlag()">[[ timeFlag ? 'Show times per your timezone' : 'Show times at Venue']]</button>
             <div class="social">
                 <div class="fb-like" data-href="worldcup2015" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
