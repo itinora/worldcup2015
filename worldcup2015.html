@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
-    <meta name="description" content="Interactive Cricket World Cup 2015 Schedule">
+    <meta name="description" content="Cricket World Cup 2015 Interactive Schedule">
     <meta name="author" content="itinora">
     <meta property="og:title" content="Cricket World Cup 2015 Interactive Schedule"/>
     <meta property="og:type" content="website"/>
@@ -68,8 +68,7 @@
                     <div class="team-shortname">[[::match.team_two_short]]</div>
                 </div>
             </div>
-            <div ng-hide="selectedMatches.length">
-            </div>
+            <div ng-hide="selectedMatches.length" class="timezone-message">Timings are shown in your local time</div>
         </div>
     </div>
 
@@ -131,6 +130,7 @@
                 bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
                 bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleY(" + scaleY + ")";
             }
+            document.getElementsByClassName('timezone-message')[0].style.display = "none";
             window.mobile = false;
         } else {
             //mobile portrait devices
@@ -144,6 +144,7 @@
             document.getElementById('container').style.width = window.innerWidth + "px";
             document.getElementsByClassName('bg')[0].style.width = window.innerWidth + "px";
             document.getElementsByClassName('logo')[0].style.display = "none";
+            document.getElementsByClassName('timezone')[0].style.display = "none";
             document.getElementsByClassName('central')[0].style.transform = document.getElementsByClassName('central')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
             document.getElementsByClassName('central')[0].style.width = window.innerWidth/scale + "px";
 

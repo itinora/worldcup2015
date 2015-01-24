@@ -38,6 +38,12 @@ body {
     position: relative;
 }
 
+.timezone-message {
+    position: relative;
+    top: 250px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
 .timezone {
     position: absolute;
     top: 20px;
@@ -213,7 +219,7 @@ body {
 }
 
 .city {
-  font-size: 1em;
+    font-size: 1em;
 }
 
 .central {
