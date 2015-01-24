@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
-    <meta name="description" content="Interactive Cricket World Cup 2015 Schedule">
+    <meta name="description" content="Cricket World Cup 2015 Interactive Schedule">
     <meta name="author" content="itinora">
     <meta property="og:title" content="Cricket World Cup 2015 Interactive Schedule"/>
     <meta property="og:type" content="website"/>
@@ -40,21 +40,12 @@
 
 <div id="container" ng-controller="ScheduleCtrl">
     <a href="http://www.itinora.com"><img ng-src="images/itinora.png" class="logo" alt="itinora" title="itinora"></a>
-    <div class="date-strip control">
-        <div id="dates">
-            <div ng-repeat="matchDate in dates" class="date [[matchDate.pool | lowercase]]" ng-click="onDateSelect(matchDate.date, true);"   ng-mouseover="onDateSelect(matchDate.date);" ng-mouseleave="deselectAll();" ng-class="{selected: matchDate.selected}">
-                <div class="month">[[ month(matchDate.date) ]]</div>
-                <div class="dateOfMonth">[[ dateOfMonth(matchDate.date) ]]</div>
-            </div>
-        </div>
+    <div class="timezone" >
+        <div>Time zone</div>
+        <button ng-click="toggleTimeFlag()" class="toggle-button left" ng-disabled="!timeFlag">My Location</button>
+        <button ng-click="toggleTimeFlag()" class="toggle-button right" ng-disabled="timeFlag">Venue</button>
     </div>
 
-    <div class="teams">
-        <div class="pool-header pool-A">POOL A</div>
-        <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
-            <div class="team-name">[[ team.name ]]</div>
-        </div>
-    </div>
     <div class="central control">
         <div class="matches" >
             <div ng-repeat="match in selectedMatches" class="match" >
@@ -77,8 +68,7 @@
                     <div class="team-shortname">[[::match.team_two_short]]</div>
                 </div>
             </div>
-            <div ng-hide="selectedMatches.length">
-            </div>
+            <div ng-hide="selectedMatches.length" class="timezone-message">Timings are shown in your local time</div>
         </div>
     </div>
 
@@ -114,7 +104,6 @@
         </div>
 
         <footer>
-            <button ng-click="toggleTimeFlag()">[[ timeFlag ? 'Show times per your timezone' : 'Show times at Venue']]</button>
             <div class="social">
                 <div class="fb-like" data-href="worldcup2015" data-layout="button_count" data-action="like" data-width="500" data-show-faces="false" data-share="true"></div>
                 <a href="https://twitter.com/share" class="twitter-share-button" data-text="Checkout this interactive cricket world cup 2015 shecedule" data-via="itinora @cricketworldcup" data-size="small" data-hashtags="cwc15">Tweet</a>
@@ -141,6 +130,7 @@
                 bodyStyle.transform = bodyStyle.transform + " scaleY(" + scaleY + ")";
                 bodyStyle.webkitTransform = bodyStyle.webkitTransform + " scaleY(" + scaleY + ")";
             }
+            document.getElementsByClassName('timezone-message')[0].style.display = "none";
             window.mobile = false;
         } else {
             //mobile portrait devices
@@ -154,6 +144,7 @@
             document.getElementById('container').style.width = window.innerWidth + "px";
             document.getElementsByClassName('bg')[0].style.width = window.innerWidth + "px";
             document.getElementsByClassName('logo')[0].style.display = "none";
+            document.getElementsByClassName('timezone')[0].style.display = "none";
             document.getElementsByClassName('central')[0].style.transform = document.getElementsByClassName('central')[0].style.transform + " scaleX(" + scale + ") scaleY(" + scale + ")";
             document.getElementsByClassName('central')[0].style.width = window.innerWidth/scale + "px";
 
