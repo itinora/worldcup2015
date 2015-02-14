@@ -37,9 +37,10 @@ worldcupApp
             } else {
                 return moment(match.match_datetime).format("MMM DD hh:mm A").toUpperCase();
             }
-        }
+        };
 
         $scope.selectedMatches = {};
+
         $scope.onDateSelect = function(date, staySelected) {
             staySelected = staySelected || false;
             if(!$scope.staySelected && staySelected) {
@@ -150,5 +151,25 @@ worldcupApp
         };
 
         $scope.venues = MatchesSvc.getAllVenues();
+
+        $scope.showTodaysMatches = function() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1;
+            var yyyy = today.getFullYear();
+            if(dd<10) {
+                dd='0'+dd
+            }
+
+            if(mm<10) {
+                mm='0'+mm
+            }
+
+            today = yyyy + '-' + mm + '-' + dd;
+            $scope.onDateSelect(today);
+            highlightDatesForSelectedMatches();
+        };
+
+        $scope.showTodaysMatches();
     }]
 );

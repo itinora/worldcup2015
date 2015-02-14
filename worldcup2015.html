@@ -49,7 +49,7 @@
     <div class="central control">
         <div class="matches" >
             <div ng-repeat="match in selectedMatches" class="match" >
-                <div class="team-box">
+                <div class="team-box" ng-class="{loser : match.loser === match.team_one_short}">
                     <div class="pool-[[::match.pool]] left-marker"></div>
                     <div style="margin-left: 90px">
                         <img ng-src="images/[[::match.team_one_short]].jpg" class="team-flag">
@@ -57,13 +57,20 @@
                     </div>
                 </div>
                 <div class="match-details">
-                    <div>
-                        <div class="match-time local">[[getTime(match)]]</div>
-                        <div class="[[::match.match_type]]">[[::match.match_type]]</div>
+                    <div ng-show="match.result === undefined">
+                        <div>
+                            <div class="match-time local">[[getTime(match)]]</div>
+                            <div class="[[::match.match_type]]">[[::match.match_type]]</div>
+                        </div>
+                        <div class="match-venue" >[[::match.city | uppercase]]</div>
                     </div>
-                    <div class="match-venue">[[::match.city | uppercase]]</div>
+                    <div ng-show="match.result !== undefined">
+                        <div class="match-score">[[::match.team_one_score]]</div>
+                        <div class="match-score">[[::match.team_two_score]]</div>
+                        <div class="match-result">[[::match.result]]</div>
+                    </div>
                 </div>
-                <div class="team-box" style="margin-left:-20px;">
+                <div class="team-box" style="margin-left:-20px;" ng-class="{loser : match.loser === match.team_two_short}">
                     <img ng-src="images/[[::match.team_two_short]].jpg" class="team-flag">
                     <div class="team-shortname">[[::match.team_two_short]]</div>
                 </div>

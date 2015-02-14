@@ -334,6 +334,16 @@ body {
     font-size: 0.6em;
 }
 
+.match-score {
+    font-size: 0.5em;
+    display: inline-block;
+    width: 96px;
+}
+
+.match-result {
+    font-size: 0.5em;
+}
+
 .match-date {
     font-size: 0.6em;
 }
@@ -342,6 +352,10 @@ body {
     background-color: rgba(0, 0, 0, 0.85);
     color: rgba(255, 255, 255, 0.90);
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.loser {
+    opacity: 0.2;
 }
 
 footer {
