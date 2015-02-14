@@ -49,9 +49,9 @@
     <div class="central control">
         <div class="matches" >
             <div ng-repeat="match in selectedMatches" class="match" >
-                <div class="team-box" ng-class="{loser : match.loser === match.team_one_short}">
+                <div class="team-box">
                     <div class="pool-[[::match.pool]] left-marker"></div>
-                    <div style="margin-left: 90px">
+                    <div style="margin-left: 90px" ng-class="{loser : match.loser === match.team_one_short}">
                         <img ng-src="images/[[::match.team_one_short]].jpg" class="team-flag">
                         <div class="team-shortname">[[::match.team_one_short]]</div>
                     </div>

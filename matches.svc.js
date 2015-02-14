@@ -7,7 +7,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'New Zealand', 'team_two_short': 'NZ', 'start_time' : '11:00 am', 'match_datetime': '2015-02-14T11:00+13:00','timezone': 'Pacific/Auckland', 'pool' : 'A'
             },
             {
-                'loser': '', 'team_one_score': '219/9 (39.1)', 'team_two_score': '342/9 (50)', 'result': 'LIVE',
+                'loser': 'ENG', 'team_one_score': '231 (41.5)', 'team_two_score': '342/9 (50)', 'result': 'Australia won by 111 runs',
                 'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-02-14', 'match_day':'Saturday', 'match_type':'DN'
                 , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'England', 'team_two_short': 'ENG', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-14T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'A'
             },
