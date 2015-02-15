@@ -12,10 +12,12 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'England', 'team_two_short': 'ENG', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-14T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'A'
             },
             {
+                'loser': 'ZIM', 'team_one_score': '339/4 (50)', 'team_two_score': '277 (48.2)', 'result': 'South Africa won by 62 runs',
                 'city' : 'Hamilton', 'stadium' : 'Seddon Park', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
                 , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-15T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
             {
+                'loser': 'PAK', 'team_one_score': '300/7 (50)', 'team_two_score': '224 (47)', 'result': 'India won by 76 runs',
                 'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
                 , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Pakistan', 'team_two_short': 'PAK', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-15T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool': 'B'
             },
