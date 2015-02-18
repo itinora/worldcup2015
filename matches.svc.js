@@ -22,6 +22,7 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Pakistan', 'team_two_short': 'PAK', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-15T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool': 'B'
             },
             {
+                'loser': 'WI', 'team_one_score': '304/7 (50)', 'team_two_score': '307/6 (45.5)', 'result': 'Ireland won by 4 wickets',
                 'city' : 'Nelson', 'stadium' : 'Saxton Oval', 'match_date': '2015-02-16', 'match_day':'Monday', 'match_type':'D'
                 , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '11:00 am', 'match_datetime': '2015-02-16T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
