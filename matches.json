@@ -77,6 +77,10 @@
       "pool": "B"
     },
     {
+      "loser": "WI",
+      "team_one_score": "304/7 (50)",
+      "team_two_score": "307/6 (45.5)",
+      "result": "Ireland won by 4 wickets",
       "city": "Nelson",
       "stadium": "Saxton Oval",
       "match_date": "2015-02-16",
@@ -92,6 +96,10 @@
       "pool": "B"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "146/7 (24.5)",
+      "team_two_score": "142 (36.2)",
+      "result": "New Zealand won by 3 wickets",
       "city": "Dunedin",
       "stadium": "University Oval",
       "match_date": "2015-02-17",
@@ -107,6 +115,10 @@
       "pool": "A"
     },
     {
+      "loser": "AFG",
+      "team_one_score": "267 (50)",
+      "team_two_score": "162 (42.5)",
+      "result": "Bangladesh won by 105 runs",
       "city": "Canberra",
       "stadium": "Manuka Oval",
       "match_date": "2015-02-18",
