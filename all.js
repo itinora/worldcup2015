@@ -6,10 +6,10 @@ var worldcupApp  = angular.module('worldcup2015', [])
         return window.moment;
     });
 
-worldcupApp.config(["$interpolateProvider", function($interpolateProvider) {
+worldcupApp.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
-}]);
+});
 
 worldcupApp
     .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment', function ($scope, MatchesSvc, _, $log, moment) {

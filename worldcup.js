@@ -12,7 +12,7 @@ worldcupApp.config(function($interpolateProvider) {
 });
 
 worldcupApp
-    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment',  function ($scope, MatchesSvc, _, $log, moment) {
+    .controller('ScheduleCtrl', [ '$scope', 'MatchesSvc', '_', '$log', 'moment', function ($scope, MatchesSvc, _, $log, moment) {
         'use strict';
 
         $scope.timeFlag = false;
@@ -20,7 +20,35 @@ worldcupApp
             $scope.timeFlag = !$scope.timeFlag;
         }
 
-        $scope.dates = MatchesSvc.getAllMatchDates();
+        MatchesSvc.getAllMatches()
+            .success(function(response){
+
+                MatchesSvc.setMatches(response.matches);
+
+                $scope.dates = MatchesSvc.getAllMatchDates();
+
+                $scope.venues = MatchesSvc.getAllVenues();
+
+                $scope.showTodaysMatches = function() {
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth()+1;
+                    var yyyy = today.getFullYear();
+                    if(dd<10) {
+                        dd='0'+dd
+                    }
+
+                    if(mm<10) {
+                        mm='0'+mm
+                    }
+
+                    today = yyyy + '-' + mm + '-' + dd;
+                    $scope.onDateSelect(today);
+                    highlightDatesForSelectedMatches();
+                };
+
+                $scope.showTodaysMatches();
+        });
 
         $scope.month = function(date) {
             return date.substr(6,1) === '2' ? 'Feb' : 'Mar';
@@ -150,26 +178,5 @@ worldcupApp
             }
         };
 
-        $scope.venues = MatchesSvc.getAllVenues();
-
-        $scope.showTodaysMatches = function() {
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth()+1;
-            var yyyy = today.getFullYear();
-            if(dd<10) {
-                dd='0'+dd
-            }
-
-            if(mm<10) {
-                mm='0'+mm
-            }
-
-            today = yyyy + '-' + mm + '-' + dd;
-            $scope.onDateSelect(today);
-            highlightDatesForSelectedMatches();
-        };
-
-        $scope.showTodaysMatches();
     }]
 );
