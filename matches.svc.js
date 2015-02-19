@@ -27,10 +27,12 @@ angular.module('worldcup2015')
                 , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '11:00 am', 'match_datetime': '2015-02-16T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
             },
             {
+                'loser': 'SCO', 'team_one_score': '146/7 (24.5)', 'team_two_score': '142 (36.2)', 'result': 'New Zealand won by 3 wickets',
                 'city' : 'Dunedin', 'stadium' : 'University Oval', 'match_date': '2015-02-17', 'match_day':'Tuesday', 'match_type':'D'
                 , 'team_one_long': 'New Zealand', 'team_one_short': 'NZ', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'match_datetime': '2015-02-17T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
             },
             {
+                'loser': 'AFG', 'team_one_score': '162 (42.5)', 'team_two_score': '267 (50)', 'result': 'Bangladesh won by 105 runs',
                 'city' : 'Canberra', 'stadium': 'Manuka Oval', 'match_date': '2015-02-18', 'match_day':'Wednesday', 'match_type':'DN'
                 , 'team_one_long': 'Bangladesh', 'team_one_short': 'BAN', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-18T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'A'
             },
