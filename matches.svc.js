@@ -1,213 +1,23 @@
 angular.module('worldcup2015')
-.service('MatchesSvc', ['_', 'moment', function(_, moment) {
-        var matches = [
-            {
-                'loser': 'SRI', 'team_one_score': '233 (46.1)', 'team_two_score': '331/6 (50)', 'result': 'New Zealand won by 98 runs',
-                'city' : 'Christchurch', 'stadium' : 'Hagley Oval', 'match_date': '2015-02-14', 'match_day':'Saturday', 'match_type':'D'
-                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'New Zealand', 'team_two_short': 'NZ', 'start_time' : '11:00 am', 'match_datetime': '2015-02-14T11:00+13:00','timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'loser': 'ENG', 'team_one_score': '231 (41.5)', 'team_two_score': '342/9 (50)', 'result': 'Australia won by 111 runs',
-                'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-02-14', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'England', 'team_two_short': 'ENG', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-14T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'A'
-            },
-            {
-                'loser': 'ZIM', 'team_one_score': '339/4 (50)', 'team_two_score': '277 (48.2)', 'result': 'South Africa won by 62 runs',
-                'city' : 'Hamilton', 'stadium' : 'Seddon Park', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-15T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'loser': 'PAK', 'team_one_score': '300/7 (50)', 'team_two_score': '224 (47)', 'result': 'India won by 76 runs',
-                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-02-15', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Pakistan', 'team_two_short': 'PAK', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-15T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool': 'B'
-            },
-            {
-                'loser': 'WI', 'team_one_score': '304/7 (50)', 'team_two_score': '307/6 (45.5)', 'result': 'Ireland won by 4 wickets',
-                'city' : 'Nelson', 'stadium' : 'Saxton Oval', 'match_date': '2015-02-16', 'match_day':'Monday', 'match_type':'D'
-                , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '11:00 am', 'match_datetime': '2015-02-16T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'loser': 'SCO', 'team_one_score': '146/7 (24.5)', 'team_two_score': '142 (36.2)', 'result': 'New Zealand won by 3 wickets',
-                'city' : 'Dunedin', 'stadium' : 'University Oval', 'match_date': '2015-02-17', 'match_day':'Tuesday', 'match_type':'D'
-                , 'team_one_long': 'New Zealand', 'team_one_short': 'NZ', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'match_datetime': '2015-02-17T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'loser': 'AFG', 'team_one_score': '162 (42.5)', 'team_two_score': '267 (50)', 'result': 'Bangladesh won by 105 runs',
-                'city' : 'Canberra', 'stadium': 'Manuka Oval', 'match_date': '2015-02-18', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'Bangladesh', 'team_one_short': 'BAN', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-18T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'A'
-            },
-            {
-                'city' : 'Nelson', 'stadium' : 'Saxton Oval', 'match_date': '2015-02-19', 'match_day':'Thursday', 'match_type':'D'
-                , 'team_one_long': 'Zimbabwe', 'team_one_short': 'ZIM', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '11:00 am', 'match_datetime': '2015-02-19T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Wellington', 'stadium' : 'Regional Stadium', 'match_date': '2015-02-20', 'match_day':'Friday', 'match_type':'DN'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'New Zealand', 'team_two_short': 'NZ', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-20T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Christchurch', 'stadium' : 'Hagley Oval', 'match_date': '2015-02-21', 'match_day':'Saturday', 'match_type':'D'
-                , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'West Indies', 'team_two_short': 'WI', 'start_time' : '11:00 am', 'match_datetime': '2015-02-21T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Brisbane', 'stadium': 'Gabba', 'match_date': '2015-02-21', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '01:30 pm', 'match_datetime': '2015-02-21T13:30+10:00', 'timezone': 'Australia/Brisbane', 'pool' : 'A'
-            },
-            {
-                'city' : 'Dunedin', 'stadium' : 'University Oval', 'match_date': '2015-02-22', 'match_day':'Sunday', 'match_type':'D'
-                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '11:00 am', 'match_datetime': '2015-02-22T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-02-22', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'India', 'team_two_short': 'IND', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-22T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'B'
-            },
-            {
-                'city' : 'Christchurch', 'stadium' : 'Hagley Oval', 'match_date': '2015-02-23', 'match_day':'Monday', 'match_type':'D'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'match_datetime': '2015-02-23T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Canberra', 'stadium': 'Manuka Oval', 'match_date': '2015-02-24', 'match_day':'Tuesday', 'match_type':'DN'
-                , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-24T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'B'
-            },
-            {
-                'city' : 'Brisbane', 'stadium': 'Gabba', 'match_date': '2015-02-25', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'Ireland', 'team_one_short': 'IRE', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '01:30 pm', 'match_datetime': '2015-02-25T13:30+10:00', 'timezone': 'Australia/Brisbane', 'pool' : 'B'
-            },
-            {
-                'city' : 'Dunedin', 'stadium' : 'University Oval', 'match_date': '2015-02-26', 'match_day':'Thursday', 'match_type':'D'
-                , 'team_one_long': 'Afghanistan', 'team_one_short': 'AFG', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'match_datetime': '2015-02-26T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-02-26', 'match_day':'Thursday', 'match_type':'DN'
-                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-26T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'A'
-            },
-            {
-                'city' : 'Sydney', 'stadium' : 'SCG', 'match_date': '2015-02-27', 'match_day':'Friday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'West Indies', 'team_two_short': 'WI', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-27T14:30+11:00', 'timezone': 'Australia/Sydney', 'pool' : 'B'
-            },
-            {
-                'city' : 'Auckland', 'stadium' : 'Eden Park', 'match_date': '2015-02-28', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'New Zealand', 'team_two_short': 'NZ', 'start_time' : '02:00 pm', 'match_datetime': '2015-02-28T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Perth', 'stadium' : 'WACA', 'match_date': '2015-02-28', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '02:30 pm', 'match_datetime': '2015-02-28T14:30+08:00', 'timezone': 'Australia/Perth', 'pool' : 'B'
-            },
-            {
-                'city' : 'Wellington', 'stadium' : 'Regional Stadium', 'match_date': '2015-03-01', 'match_day':'Sunday', 'match_type':'D'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Sri Lanka', 'team_two_short': 'SRI', 'start_time' : '11:00 am', 'match_datetime': '2015-03-01T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Brisbane', 'stadium': 'Gabba', 'match_date': '2015-03-01', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '01:30 pm', 'match_datetime': '2015-03-01T13:30+10:00', 'timezone': 'Australia/Brisbane', 'pool' : 'B'
-            },
-            {
-                'city' : 'Canberra', 'stadium': 'Manuka Oval', 'match_date': '2015-03-03', 'match_day':'Tuesday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-03T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'B'
-            },
-            {
-                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-04', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-04T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Perth', 'stadium' : 'WACA', 'match_date': '2015-03-04', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-04T14:30+08:00', 'timezone': 'Australia/Perth', 'pool' : 'A'
-            },
-            {
-                'city' : 'Nelson', 'stadium' : 'Saxton Oval', 'match_date': '2015-03-05', 'match_day':'Thursday', 'match_type':'D'
-                , 'team_one_long': 'Bangladesh', 'team_one_short': 'BAN', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '11:00 am', 'match_datetime': '2015-03-05T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Perth', 'stadium' : 'WACA', 'match_date': '2015-03-06', 'match_day':'Friday', 'match_type':'DN'
-                , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'West Indies', 'team_two_short': 'WI', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-06T14:30+08:00', 'timezone': 'Australia/Perth', 'pool' : 'B'
-            },
-            {
-                'city' : 'Auckland', 'stadium' : 'Eden Park', 'match_date': '2015-03-07', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'Pakistan', 'team_two_short': 'PAK', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-07T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Hobart', 'stadium': 'Bellerive Oval', 'match_date': '2015-03-07', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'Zimbabwe', 'team_one_short': 'ZIM', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-07T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'B'
-            },
-            {
-                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-08', 'match_day':'Sunday', 'match_type':'D'
-                , 'team_one_long': 'New Zealand', 'team_one_short': 'NZ', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '11:00 am', 'match_datetime': '2015-03-08T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Sydney', 'stadium' : 'SCG', 'match_date': '2015-03-08', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Sri Lanka', 'team_two_short': 'SRI', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-08T14:30+11:00', 'timezone': 'Australia/Sydney', 'pool' : 'A'
-            },
-            {
-                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-09', 'match_day':'Monday', 'match_type':'DN'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Bangladesh', 'team_two_short': 'BAN', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-09T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool' : 'A'
-            },
-            {
-                'city' : 'Hamilton', 'stadium' : 'Seddon Park', 'match_date': '2015-03-10', 'match_day':'Tuesday', 'match_type':'DN'
-                , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-10T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Hobart', 'stadium': 'Bellerive Oval', 'match_date': '2015-03-11', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'Sri Lanka', 'team_one_short': 'SRI', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-11T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'A'
-            },
-            {
-                'city' : 'Wellington', 'stadium' : 'Regional Stadium', 'match_date': '2015-03-12', 'match_day':'Thursday', 'match_type':'DN'
-                , 'team_one_long': 'South Africa', 'team_one_short': 'SA', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-12T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Hamilton', 'stadium' : 'Seddon Park', 'match_date': '2015-03-13', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'Bangladesh', 'team_one_short': 'BAN', 'team_two_long': 'New Zealand', 'team_two_short': 'NZ', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-13T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'A'
-            },
-            {
-                'city' : 'Sydney', 'stadium' : 'SCG', 'match_date': '2015-03-13', 'match_day':'Friday', 'match_type':'DN'
-                , 'team_one_long': 'England', 'team_one_short': 'ENG', 'team_two_long': 'Afghanistan', 'team_two_short': 'AFG', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-13T14:30+11:00', 'timezone': 'Australia/Sydney', 'pool' : 'A'
-            },
-            {
-                'city' : 'Auckland', 'stadium' : 'Eden Park', 'match_date': '2015-03-14', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'India', 'team_one_short': 'IND', 'team_two_long': 'Zimbabwe', 'team_two_short': 'ZIM', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-14T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Hobart', 'stadium': 'Bellerive Oval', 'match_date': '2015-03-14', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'Australia', 'team_one_short': 'AUS', 'team_two_long': 'Scotland', 'team_two_short': 'SCO', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-14T14:30+11:00', 'timezone': 'Australia/Hobart', 'pool' : 'A'
-            },
-            {
-                'city' : 'Napier', 'stadium' : 'McLean Park', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'D'
-                , 'team_one_long': 'West Indies', 'team_one_short': 'WI', 'team_two_long': 'United Arab Emirates', 'team_two_short': 'UAE', 'start_time' : '11:00 am', 'match_datetime': '2015-03-15T11:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'B'
-            },
-            {
-                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-15', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'Pakistan', 'team_one_short': 'PAK', 'team_two_long': 'Ireland', 'team_two_short': 'IRE', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-15T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool' : 'B'
-            },
-            {
-                'city' : 'Sydney', 'stadium' : 'SCG', 'match_date': '2015-03-18', 'match_day':'Wednesday', 'match_type':'DN'
-                , 'team_one_long': 'A1', 'team_one_short': 'A1', 'team_two_long': 'B4', 'team_two_short': 'B4', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-18T14:30+11:00', 'timezone': 'Australia/Sydney', 'pool' : 'F'
-            },
-            {
-                'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-03-19', 'match_day':'Thursday', 'match_type':'DN'
-                , 'team_one_long': 'A2', 'team_one_short': 'A2', 'team_two_long': 'B3', 'team_two_short': 'B3', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-19T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'F'
-            },
-            {
-                'city' : 'Adelaide', 'stadium': 'Adelaide Oval', 'match_date': '2015-03-20', 'match_day':'Friday', 'match_type':'DN'
-                , 'team_one_long': 'A3', 'team_one_short': 'A3', 'team_two_long': 'B2', 'team_two_short': 'B2', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-20T14:00+10:30', 'timezone': 'Australia/Adelaide', 'pool' : 'F'
-            },
-            {
-                'city' : 'Wellington', 'stadium' : 'Regional Stadium', 'match_date': '2015-03-21', 'match_day':'Saturday', 'match_type':'DN'
-                , 'team_one_long': 'A4', 'team_one_short': 'A4', 'team_two_long': 'B1', 'team_two_short': 'B1', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-21T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'F'
-            },
-            {
-                'city' : 'Auckland', 'stadium' : 'Eden Park', 'match_date': '2015-03-24', 'match_day':'Tuesday', 'match_type':'DN'
-                , 'team_one_long': 'TBC', 'team_one_short': 'TBC', 'team_two_long': 'TBC', 'team_two_short': 'TBC', 'start_time' : '02:00 pm', 'match_datetime': '2015-03-24T14:00+13:00', 'timezone': 'Pacific/Auckland', 'pool' : 'F'
-            },
-            {
-                'city' : 'Sydney', 'stadium' : 'SCG', 'match_date': '2015-03-26', 'match_day':'Thursday', 'match_type':'DN'
-                , 'team_one_long': 'TBC', 'team_one_short': 'TBC', 'team_two_long': 'TBC', 'team_two_short': 'TBC', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-26T14:30+11:00', 'timezone': 'Australia/Sydney', 'pool' : 'F'
-            },
-            {
-                'city' : 'Melbourne', 'stadium' : 'MCG', 'match_date': '2015-03-29', 'match_day':'Sunday', 'match_type':'DN'
-                , 'team_one_long': 'TBC', 'team_one_short': 'TBC', 'team_two_long': 'TBC', 'team_two_short': 'TBC', 'start_time' : '02:30 pm', 'match_datetime': '2015-03-29T14:30+11:00', 'timezone': 'Australia/Melbourne', 'pool' : 'F'
-            }
-        ];
+.service('MatchesSvc', ['_', 'moment', '$http', function(_, moment, $http) {
+
+        this.matches = null;
+
+        this.setMatches = function(matches) {
+            this.matches = matches;
+        }
+        this.getAllMatches = function() {
+            var params = {
+                'itinora': new Date().getTime()
+            };
+            var config = {
+                params: params
+            };
+            return $http.get("/static/data/matches.json", config);
+        };
 
         this.getAllVenues = function() {
-            return _.unique(_.map(matches, function(match){
+            return _.unique(_.map(this.matches, function(match){
                 return {'city': match.city, 'stadium': match.stadium, selected: false};
             }), false, function(v){
                 return v.city;
@@ -215,7 +25,7 @@ angular.module('worldcup2015')
         };
 
         this.getAllMatchDates = function() {
-            return _.unique(_.sortBy(_.map(matches, function(match){
+            return _.unique(_.sortBy(_.map(this.matches, function(match){
                 return {'date': match.match_date, selected: false, 'pool': match.pool};
             }), 'date'), false, function(v){
                 return v.date;
@@ -223,17 +33,16 @@ angular.module('worldcup2015')
         }
 
         this.getMatchesForDate = function(date) {
-            return _.where(matches, {match_date : date});
+            return _.where(this.matches, {match_date : date});
         }
 
         this.getMatchesForTeam = function(team) {
-            return _.filter(matches, function(match) {
+            return _.filter(this.matches, function(match) {
                 return match.team_one_long === team.name || match.team_two_long === team.name;
             });
         }
 
         this.getMatchesForVenue = function(venue) {
-            return _.where(matches, {city : venue.city});
+            return _.where(this.matches, {city : venue.city});
         }
-
     }]);
