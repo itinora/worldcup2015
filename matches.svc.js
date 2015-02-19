@@ -45,5 +45,4 @@ angular.module('worldcup2015')
         this.getMatchesForVenue = function(venue) {
             return _.where(this.matches, {city : venue.city});
         }
-
     }]);
