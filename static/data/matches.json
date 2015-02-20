@@ -153,6 +153,10 @@
       "pool": "B"
     },
     {
+      "loser": "ENG",
+      "team_one_score": "123 (33.2)",
+      "team_two_score": "125/3 (12.2)",
+      "result": "New Zealand won by 8 wickets",
       "city": "Wellington",
       "stadium": "Regional Stadium",
       "match_date": "2015-02-20",
