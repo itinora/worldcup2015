@@ -172,6 +172,10 @@
       "pool": "A"
     },
     {
+      "loser": "PAK",
+      "team_one_score": "160 (39)",
+      "team_two_score": "310/6 (50)",
+      "result": "West Indies won by 150 runs",
       "city": "Christchurch",
       "stadium": "Hagley Oval",
       "match_date": "2015-02-21",
@@ -187,6 +191,9 @@
       "pool": "B"
     },
     {
+      "team_one_score": "",
+      "team_two_score": "",
+      "result": "Match abandoned",
       "city": "Brisbane",
       "stadium": "Gabba",
       "match_date": "2015-02-21",
