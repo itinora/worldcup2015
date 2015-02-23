@@ -90,14 +90,14 @@
 
         <div class="teams">
             <div class="pool-header pool-A">POOL A</div>
-            <div ng-repeat="team in ::teamsInPool('A')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
+            <div ng-repeat="team in ::poolATeams" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}" >
                 <div class="team-name">[[ team.name ]]</div>
             </div>
         </div>
 
         <div class="teams control right">
             <div class="pool-header pool-B">POOL B</div>
-            <div ng-repeat="team in ::teamsInPool('B')" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
+            <div ng-repeat="team in ::poolBTeams" class="team control" ng-click="onTeamSelect(team, true);" ng-mouseover="onTeamSelect(team);" ng-mouseleave="deselectAll();" ng-class="{selected: team.selected}">
                 <div class="team-name">[[ ::team.name ]]</div>
             </div>
         </div>

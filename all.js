@@ -20,10 +20,26 @@ worldcupApp
             $scope.timeFlag = !$scope.timeFlag;
         }
 
+        $scope.teamsInPool = function(pool){
+            var result = [];
+            for(var i= 0, team; team = $scope.teams[i]; i++) {
+                if(team.pool === pool) {
+                    result.push(team);
+                }
+            }
+
+            var sortedResult = _(result).chain().sortBy('nrr').sortBy('pts').reverse().value();
+            return sortedResult;
+        };
+
         MatchesSvc.getAllMatches()
             .success(function(response){
 
                 MatchesSvc.setMatches(response.matches);
+
+                $scope.teams = response.teams;
+                $scope.poolATeams = $scope.teamsInPool('A');
+                $scope.poolBTeams = $scope.teamsInPool('B');
 
                 $scope.dates = MatchesSvc.getAllMatchDates();
 
@@ -115,31 +131,6 @@ worldcupApp
             });
         };
 
-        $scope.teams = [
-            {'name': 'England', 'pool': 'A', 'selected': false},
-            {'name': 'Australia', 'pool': 'A', 'selected': false},
-            {'name': 'Sri Lanka', 'pool': 'A', 'selected': false},
-            {'name': 'Bangladesh', 'pool': 'A', 'selected': false},
-            {'name': 'New Zealand', 'pool': 'A', 'selected': false},
-            {'name': 'Afghanistan', 'pool': 'A', 'selected': false},
-            {'name': 'Scotland', 'pool': 'A', 'selected': false},
-            {'name': 'South Africa', 'pool': 'B', 'selected': false},
-            {'name': 'India', 'pool': 'B', 'selected': false},
-            {'name': 'Pakistan', 'pool': 'B', 'selected': false},
-            {'name': 'West Indies', 'pool': 'B', 'selected': false},
-            {'name': 'Zimbabwe', 'pool': 'B', 'selected': false},
-            {'name': 'Ireland', 'pool': 'B', 'selected': false},
-            {'name': 'United Arab Emirates', 'pool': 'B', 'selected': false},
-        ];
-        $scope.teamsInPool = function(pool){
-            var result = [];
-            for(var i= 0, team; team = $scope.teams[i]; i++) {
-                if(team.pool === pool) {
-                    result.push(team);
-                }
-            }
-            return result;
-        };
         $scope.onTeamSelect = function(team, staySelected) {
             staySelected = staySelected || false;
             if(!$scope.staySelected && staySelected) {
