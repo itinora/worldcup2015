@@ -187,7 +187,7 @@ angular.module('worldcup2015')
             var config = {
                 params: params
             };
-            return $http.get("/worldcup2015/static/data/matches.json", config);
+            return $http.get("/static/data/matches.json", config);
         };
 
         this.getAllVenues = function() {
