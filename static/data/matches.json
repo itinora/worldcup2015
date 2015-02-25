@@ -266,6 +266,10 @@
       "pool": "A"
     },
     {
+      "loser": "ZIM",
+      "team_one_score": "372/2 (50)",
+      "team_two_score": "289 (44.3)",
+      "result": "West Indies won by 73 runs (D/L method)",
       "city": "Canberra",
       "stadium": "Manuka Oval",
       "match_date": "2015-02-24",
@@ -281,6 +285,10 @@
       "pool": "B"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "279/8 (49.2)",
+      "team_two_score": "278/9 (50)",
+      "result": "Ireland won by 2 wickets",
       "city": "Brisbane",
       "stadium": "Gabba",
       "match_date": "2015-02-25",
@@ -866,29 +874,29 @@
       "name": "West Indies",
       "pool": "B",
       "selected": false,
-      "pts": 2,
-      "nrr": 1.267
+      "pts": 4,
+      "nrr": 1.339
     },
     {
       "name": "Zimbabwe",
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.495
+      "nrr": -0.827
     },
     {
       "name": "Ireland",
       "pool": "B",
       "selected": false,
-      "pts": 2,
-      "nrr": 0.618
+      "pts": 4,
+      "nrr": 0.338
     },
     {
       "name": "United Arab Emirates",
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -0.258
+      "nrr": -0.175
     }
   ]
 }
