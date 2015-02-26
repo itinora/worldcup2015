@@ -304,6 +304,10 @@
       "pool": "B"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "211/9 (49.3)",
+      "team_two_score": "210 (50)",
+      "result": "Afghanistan won by 1 wicket",
       "city": "Dunedin",
       "stadium": "University Oval",
       "match_date": "2015-02-26",
@@ -839,15 +843,15 @@
       "name": "Afghanistan",
       "pool": "A",
       "selected": false,
-      "pts": 0,
-      "nrr": -1.175
+      "pts": 2,
+      "nrr": -0.760
     },
     {
       "name": "Scotland",
       "pool": "A",
       "selected": false,
       "pts": 0,
-      "nrr": -2.740
+      "nrr": -1.735
     },
     {
       "name": "South Africa",
