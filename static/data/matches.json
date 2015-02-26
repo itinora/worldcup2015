@@ -323,6 +323,10 @@
       "pool": "A"
     },
     {
+      "loser": "BAN",
+      "team_one_score": "332/1 (50)",
+      "team_two_score": "240 (47)",
+      "result": "Sri Lanka won by 92 runs",
       "city": "Melbourne",
       "stadium": "MCG",
       "match_date": "2015-02-26",
@@ -822,15 +826,15 @@
       "name": "Sri Lanka",
       "pool": "A",
       "selected": false,
-      "pts": 2,
-      "nrr": -0.861
+      "pts": 4,
+      "nrr": 0.047
     },
     {
       "name": "Bangladesh",
       "pool": "A",
       "selected": false,
       "pts": 3,
-      "nrr": 2.100
+      "nrr": 0.130
     },
     {
       "name": "New Zealand",
