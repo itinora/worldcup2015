@@ -342,6 +342,10 @@
       "pool": "A"
     },
     {
+      "loser": "WI",
+      "team_one_score": "408/5 (50)",
+      "team_two_score": "151 (33.1)",
+      "result": "South Africa won by 257 runs",
       "city": "Sydney",
       "stadium": "SCG",
       "match_date": "2015-02-27",
@@ -861,8 +865,8 @@
       "name": "South Africa",
       "pool": "B",
       "selected": false,
-      "pts": 2,
-      "nrr": -0.680
+      "pts": 4,
+      "nrr": 1.260
     },
     {
       "name": "India",
@@ -883,7 +887,7 @@
       "pool": "B",
       "selected": false,
       "pts": 4,
-      "nrr": 1.339
+      "nrr": -0.313
     },
     {
       "name": "Zimbabwe",
