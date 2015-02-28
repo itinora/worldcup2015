@@ -361,6 +361,10 @@
       "pool": "B"
     },
     {
+      "loser": "AUS",
+      "team_one_score": "151 (32.2)",
+      "team_two_score": "152/9 (23.1)",
+      "result": "New Zealand won by 1 wicket",
       "city": "Auckland",
       "stadium": "Eden Park",
       "match_date": "2015-02-28",
@@ -824,7 +828,7 @@
       "pool": "A",
       "selected": false,
       "pts": 3,
-      "nrr": 2.220
+      "nrr": -0.305
     },
     {
       "name": "Sri Lanka",
@@ -844,8 +848,8 @@
       "name": "New Zealand",
       "pool": "A",
       "selected": false,
-      "pts": 6,
-      "nrr": 3.586
+      "pts": 8,
+      "nrr": 3.589
     },
     {
       "name": "Afghanistan",
