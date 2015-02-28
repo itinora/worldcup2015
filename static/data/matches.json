@@ -361,6 +361,10 @@
       "pool": "B"
     },
     {
+      "loser": "AUS",
+      "team_one_score": "151 (32.2)",
+      "team_two_score": "152/9 (23.1)",
+      "result": "New Zealand won by 1 wicket",
       "city": "Auckland",
       "stadium": "Eden Park",
       "match_date": "2015-02-28",
@@ -376,6 +380,10 @@
       "pool": "A"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "104/1 (18.5)",
+      "team_two_score": "102 (31.3)",
+      "result": "India won by 9 wickets",
       "city": "Perth",
       "stadium": "WACA",
       "match_date": "2015-02-28",
@@ -824,7 +832,7 @@
       "pool": "A",
       "selected": false,
       "pts": 3,
-      "nrr": 2.220
+      "nrr": -0.305
     },
     {
       "name": "Sri Lanka",
@@ -844,8 +852,8 @@
       "name": "New Zealand",
       "pool": "A",
       "selected": false,
-      "pts": 6,
-      "nrr": 3.586
+      "pts": 8,
+      "nrr": 3.589
     },
     {
       "name": "Afghanistan",
@@ -872,8 +880,8 @@
       "name": "India",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": 2.060
+      "pts": 6,
+      "nrr": 2.630
     },
     {
       "name": "Pakistan",
@@ -908,7 +916,7 @@
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -0.175
+      "nrr": -1.326
     }
   ]
 }
