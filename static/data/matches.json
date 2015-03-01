@@ -418,6 +418,10 @@
       "pool": "A"
     },
     {
+      "loser": "ZIM",
+      "team_one_score": "235/7 (50)",
+      "team_two_score": "215 (49.4)",
+      "result": "Pakistan won by 20 runs",
       "city": "Brisbane",
       "stadium": "Gabba",
       "match_date": "2015-03-01",
@@ -891,8 +895,8 @@
       "name": "Pakistan",
       "pool": "B",
       "selected": false,
-      "pts": 0,
-      "nrr": -2.260
+      "pts": 2,
+      "nrr": -1.373
     },
     {
       "name": "West Indies",
@@ -906,7 +910,7 @@
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.827
+      "nrr": -0.723
     },
     {
       "name": "Ireland",
