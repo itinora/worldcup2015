@@ -399,6 +399,10 @@
       "pool": "B"
     },
     {
+      "loser": "ENG",
+      "team_one_score": "309/6 (50)",
+      "team_two_score": "312/1 (47.2)",
+      "result": "Sri Lanka won by 9 wickets",
       "city": "Wellington",
       "stadium": "Regional Stadium",
       "match_date": "2015-03-01",
@@ -825,7 +829,7 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.415
+      "nrr": -1.201
     },
     {
       "name": "Australia",
@@ -838,8 +842,8 @@
       "name": "Sri Lanka",
       "pool": "A",
       "selected": false,
-      "pts": 4,
-      "nrr": 0.047
+      "pts": 6,
+      "nrr": 0.128
     },
     {
       "name": "Bangladesh",
