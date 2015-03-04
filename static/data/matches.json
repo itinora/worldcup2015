@@ -437,6 +437,10 @@
       "pool": "B"
     },
     {
+      "loser": "IRE",
+      "team_one_score": "411/4 (50)",
+      "team_two_score": "210 (45)",
+      "result": "South Africa won by 201 runs",
       "city": "Canberra",
       "stadium": "Manuka Oval",
       "match_date": "2015-03-03",
@@ -881,8 +885,8 @@
       "name": "South Africa",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": 1.260
+      "pts": 6,
+      "nrr": 1.950
     },
     {
       "name": "India",
@@ -917,7 +921,7 @@
       "pool": "B",
       "selected": false,
       "pts": 4,
-      "nrr": 0.338
+      "nrr": -1.137
     },
     {
       "name": "United Arab Emirates",
