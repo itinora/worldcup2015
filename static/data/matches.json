@@ -456,6 +456,10 @@
       "pool": "B"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "339/6 (50)",
+      "team_two_score": "210/8 (50)",
+      "result": "Pakistan won by 129 runs",
       "city": "Napier",
       "stadium": "McLean Park",
       "match_date": "2015-03-04",
@@ -899,8 +903,8 @@
       "name": "Pakistan",
       "pool": "B",
       "selected": false,
-      "pts": 2,
-      "nrr": -1.373
+      "pts": 4,
+      "nrr": -0.385
     },
     {
       "name": "West Indies",
@@ -928,7 +932,7 @@
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -1.326
+      "nrr": -1.691
     }
   ]
 }
