@@ -494,6 +494,10 @@
       "pool": "A"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "318/8 (50)",
+      "team_two_score": "322/4 (48.1)",
+      "result": "Bangladesh won by 6 wickets",
       "city": "Nelson",
       "stadium": "Saxton Oval",
       "match_date": "2015-03-05",
@@ -865,8 +869,8 @@
       "name": "Bangladesh",
       "pool": "A",
       "selected": false,
-      "pts": 3,
-      "nrr": 0.130
+      "pts": 5,
+      "nrr": 0.182
     },
     {
       "name": "New Zealand",
@@ -887,7 +891,7 @@
       "pool": "A",
       "selected": false,
       "pts": 0,
-      "nrr": -1.735
+      "nrr": -1.423
     },
     {
       "name": "South Africa",
