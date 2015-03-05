@@ -475,6 +475,10 @@
       "pool": "B"
     },
     {
+      "loser": "AFG",
+      "team_one_score": "417/6 (50)",
+      "team_two_score": "142 (37.3)",
+      "result": "Australia won by 275 runs",
       "city": "Perth",
       "stadium": "WACA",
       "match_date": "2015-03-04",
@@ -847,8 +851,8 @@
       "name": "Australia",
       "pool": "A",
       "selected": false,
-      "pts": 3,
-      "nrr": -0.305
+      "pts": 5,
+      "nrr": 1.804
     },
     {
       "name": "Sri Lanka",
@@ -876,7 +880,7 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -0.760
+      "nrr": -1.953
     },
     {
       "name": "Scotland",
