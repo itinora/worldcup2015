@@ -418,6 +418,10 @@
       "pool": "A"
     },
     {
+      "loser": "ZIM",
+      "team_one_score": "235/7 (50)",
+      "team_two_score": "215 (49.4)",
+      "result": "Pakistan won by 20 runs",
       "city": "Brisbane",
       "stadium": "Gabba",
       "match_date": "2015-03-01",
@@ -433,6 +437,10 @@
       "pool": "B"
     },
     {
+      "loser": "IRE",
+      "team_one_score": "411/4 (50)",
+      "team_two_score": "210 (45)",
+      "result": "South Africa won by 201 runs",
       "city": "Canberra",
       "stadium": "Manuka Oval",
       "match_date": "2015-03-03",
@@ -448,6 +456,10 @@
       "pool": "B"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "339/6 (50)",
+      "team_two_score": "210/8 (50)",
+      "result": "Pakistan won by 129 runs",
       "city": "Napier",
       "stadium": "McLean Park",
       "match_date": "2015-03-04",
@@ -463,6 +475,10 @@
       "pool": "B"
     },
     {
+      "loser": "AFG",
+      "team_one_score": "417/6 (50)",
+      "team_two_score": "142 (37.3)",
+      "result": "Australia won by 275 runs",
       "city": "Perth",
       "stadium": "WACA",
       "match_date": "2015-03-04",
@@ -478,6 +494,10 @@
       "pool": "A"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "318/8 (50)",
+      "team_two_score": "322/4 (48.1)",
+      "result": "Bangladesh won by 6 wickets",
       "city": "Nelson",
       "stadium": "Saxton Oval",
       "match_date": "2015-03-05",
@@ -493,6 +513,10 @@
       "pool": "A"
     },
     {
+      "loser": "WI",
+      "team_one_score": "185/6 (39.1)",
+      "team_two_score": "182 (44.2)",
+      "result": "India won by 4 wickets",
       "city": "Perth",
       "stadium": "WACA",
       "match_date": "2015-03-06",
@@ -835,8 +859,8 @@
       "name": "Australia",
       "pool": "A",
       "selected": false,
-      "pts": 3,
-      "nrr": -0.305
+      "pts": 5,
+      "nrr": 1.804
     },
     {
       "name": "Sri Lanka",
@@ -849,8 +873,8 @@
       "name": "Bangladesh",
       "pool": "A",
       "selected": false,
-      "pts": 3,
-      "nrr": 0.130
+      "pts": 5,
+      "nrr": 0.182
     },
     {
       "name": "New Zealand",
@@ -864,63 +888,63 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -0.760
+      "nrr": -1.953
     },
     {
       "name": "Scotland",
       "pool": "A",
       "selected": false,
       "pts": 0,
-      "nrr": -1.735
+      "nrr": -1.423
     },
     {
       "name": "South Africa",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": 1.260
+      "pts": 6,
+      "nrr": 1.950
     },
     {
       "name": "India",
       "pool": "B",
       "selected": false,
-      "pts": 6,
-      "nrr": 2.630
+      "pts": 8,
+      "nrr": 2.246
     },
     {
       "name": "Pakistan",
       "pool": "B",
       "selected": false,
-      "pts": 0,
-      "nrr": -2.260
+      "pts": 4,
+      "nrr": -0.385
     },
     {
       "name": "West Indies",
       "pool": "B",
       "selected": false,
       "pts": 4,
-      "nrr": -0.313
+      "nrr": -0.511
     },
     {
       "name": "Zimbabwe",
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.827
+      "nrr": -0.723
     },
     {
       "name": "Ireland",
       "pool": "B",
       "selected": false,
       "pts": 4,
-      "nrr": 0.338
+      "nrr": -1.137
     },
     {
       "name": "United Arab Emirates",
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -1.326
+      "nrr": -1.691
     }
   ]
 }
