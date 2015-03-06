@@ -513,6 +513,10 @@
       "pool": "A"
     },
     {
+      "loser": "WI",
+      "team_one_score": "185/6 (39.1)",
+      "team_two_score": "182 (44.2)",
+      "result": "India won by 4 wickets",
       "city": "Perth",
       "stadium": "WACA",
       "match_date": "2015-03-06",
@@ -904,8 +908,8 @@
       "name": "India",
       "pool": "B",
       "selected": false,
-      "pts": 6,
-      "nrr": 2.630
+      "pts": 8,
+      "nrr": 2.246
     },
     {
       "name": "Pakistan",
@@ -919,7 +923,7 @@
       "pool": "B",
       "selected": false,
       "pts": 4,
-      "nrr": -0.313
+      "nrr": -0.511
     },
     {
       "name": "Zimbabwe",
