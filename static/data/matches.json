@@ -532,6 +532,10 @@
       "pool": "B"
     },
     {
+      "loser": "SA",
+      "team_one_score": "202 (33.3)",
+      "team_two_score": "222 (46.4)",
+      "result": "Pakistan won by 29 runs",
       "city": "Auckland",
       "stadium": "Eden Park",
       "match_date": "2015-03-07",
@@ -547,6 +551,10 @@
       "pool": "B"
     },
     {
+      "loser": "ZIM",
+      "team_one_score": "326 (49.3)",
+      "team_two_score": "331/8 (50)",
+      "result": "Ireland won by 5 runs",
       "city": "Hobart",
       "stadium": "Bellerive Oval",
       "match_date": "2015-03-07",
@@ -902,7 +910,7 @@
       "pool": "B",
       "selected": false,
       "pts": 6,
-      "nrr": 1.950
+      "nrr": 1.462
     },
     {
       "name": "India",
@@ -915,8 +923,8 @@
       "name": "Pakistan",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": -0.385
+      "pts": 6,
+      "nrr": -0.194
     },
     {
       "name": "West Indies",
@@ -930,14 +938,14 @@
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.723
+      "nrr": -0.595
     },
     {
       "name": "Ireland",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": -1.137
+      "pts": 6,
+      "nrr": -0.820
     },
     {
       "name": "United Arab Emirates",
