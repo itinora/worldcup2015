@@ -570,6 +570,10 @@
       "pool": "B"
     },
     {
+      "loser": "AFG",
+      "team_one_score": "188/4 (36.1)",
+      "team_two_score": "186 (47.4)",
+      "result": "New Zealand won by 6 wickets",
       "city": "Napier",
       "stadium": "McLean Park",
       "match_date": "2015-03-08",
@@ -585,6 +589,10 @@
       "pool": "A"
     },
     {
+      "loser": "SRI",
+      "team_one_score": "376/9 (50)",
+      "team_two_score": "312 (46.2)",
+      "result": "Australia won by 64 runs",
       "city": "Sydney",
       "stadium": "SCG",
       "match_date": "2015-03-08",
@@ -867,15 +875,15 @@
       "name": "Australia",
       "pool": "A",
       "selected": false,
-      "pts": 5,
-      "nrr": 1.804
+      "pts": 7,
+      "nrr": 1.597
     },
     {
       "name": "Sri Lanka",
       "pool": "A",
       "selected": false,
       "pts": 6,
-      "nrr": 0.128
+      "nrr": -0.151
     },
     {
       "name": "Bangladesh",
@@ -888,15 +896,15 @@
       "name": "New Zealand",
       "pool": "A",
       "selected": false,
-      "pts": 8,
-      "nrr": 3.589
+      "pts": 10,
+      "nrr": 3.090
     },
     {
       "name": "Afghanistan",
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.953
+      "nrr": -1.881
     },
     {
       "name": "Scotland",
