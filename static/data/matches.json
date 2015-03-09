@@ -608,6 +608,10 @@
       "pool": "A"
     },
     {
+      "loser": "ENG",
+      "team_one_score": "260 (48.3)",
+      "team_two_score": "275/7 (50)",
+      "result": "Bangladesh won by 15 runs",
       "city": "Adelaide",
       "stadium": "Adelaide Oval",
       "match_date": "2015-03-09",
@@ -869,7 +873,7 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.201
+      "nrr": -1.001
     },
     {
       "name": "Australia",
@@ -889,8 +893,8 @@
       "name": "Bangladesh",
       "pool": "A",
       "selected": false,
-      "pts": 5,
-      "nrr": 0.182
+      "pts": 7,
+      "nrr": 0.211
     },
     {
       "name": "New Zealand",
