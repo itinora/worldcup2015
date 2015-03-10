@@ -627,6 +627,10 @@
       "pool": "A"
     },
     {
+      "loser": "IRE",
+      "team_one_score": "260 (36.5)",
+      "team_two_score": "259 (49)",
+      "result": "India won by 8 wickets",
       "city": "Hamilton",
       "stadium": "Seddon Park",
       "match_date": "2015-03-10",
@@ -928,8 +932,8 @@
       "name": "India",
       "pool": "B",
       "selected": false,
-      "pts": 8,
-      "nrr": 2.246
+      "pts": 10,
+      "nrr": 2.157
     },
     {
       "name": "Pakistan",
@@ -957,7 +961,7 @@
       "pool": "B",
       "selected": false,
       "pts": 6,
-      "nrr": -0.820
+      "nrr": -1.014
     },
     {
       "name": "United Arab Emirates",
