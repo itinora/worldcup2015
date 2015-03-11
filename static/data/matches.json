@@ -646,6 +646,10 @@
       "pool": "B"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "363/9 (50)",
+      "team_two_score": "215 (43.1)",
+      "result": "Sri Lanka won by 148 runs",
       "city": "Hobart",
       "stadium": "Bellerive Oval",
       "match_date": "2015-03-11",
@@ -877,7 +881,8 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.001
+      "nrr": -1.001,
+      "knockedOut": true
     },
     {
       "name": "Australia",
@@ -890,8 +895,8 @@
       "name": "Sri Lanka",
       "pool": "A",
       "selected": false,
-      "pts": 6,
-      "nrr": -0.151
+      "pts": 8,
+      "nrr": 0.371
     },
     {
       "name": "Bangladesh",
@@ -912,14 +917,16 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.881
+      "nrr": -1.881,
+      "knockedOut": true
     },
     {
       "name": "Scotland",
       "pool": "A",
       "selected": false,
       "pts": 0,
-      "nrr": -1.423
+      "nrr": -1.769,
+      "knockedOut": true
     },
     {
       "name": "South Africa",
@@ -954,7 +961,8 @@
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.595
+      "nrr": -0.595,
+      "knockedOut": true
     },
     {
       "name": "Ireland",
@@ -968,7 +976,8 @@
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -1.691
+      "nrr": -1.691,
+      "knockedOut": true
     }
   ]
 }
