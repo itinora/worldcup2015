@@ -665,6 +665,10 @@
       "pool": "A"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "341/6 (50)",
+      "team_two_score": "195 (47.3)",
+      "result": "South Africa won by 146 runs",
       "city": "Wellington",
       "stadium": "Regional Stadium",
       "match_date": "2015-03-12",
@@ -932,8 +936,8 @@
       "name": "South Africa",
       "pool": "B",
       "selected": false,
-      "pts": 6,
-      "nrr": 1.462
+      "pts": 8,
+      "nrr": 1.707
     },
     {
       "name": "India",
@@ -976,7 +980,7 @@
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -1.691,
+      "nrr": -1.961,
       "knockedOut": true
     }
   ]
