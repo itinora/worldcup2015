@@ -684,6 +684,10 @@
       "pool": "B"
     },
     {
+      "loser": "BAN",
+      "team_one_score": "288/7 (50)",
+      "team_two_score": "290/7 (48.5)",
+      "result": "New Zealand won by 3 wickets",
       "city": "Hamilton",
       "stadium": "Seddon Park",
       "match_date": "2015-03-13",
@@ -907,14 +911,14 @@
       "pool": "A",
       "selected": false,
       "pts": 7,
-      "nrr": 0.211
+      "nrr": 0.136
     },
     {
       "name": "New Zealand",
       "pool": "A",
       "selected": false,
-      "pts": 10,
-      "nrr": 3.090
+      "pts": 12,
+      "nrr": 2.564
     },
     {
       "name": "Afghanistan",
