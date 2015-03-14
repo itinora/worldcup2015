@@ -703,6 +703,10 @@
       "pool": "A"
     },
     {
+      "loser": "AFG",
+      "team_one_score": "111/7 (36.2)",
+      "team_two_score": "101/1 (18.1)",
+      "result": "England won by 9 wickets (D/L)",
       "city": "Sydney",
       "stadium": "SCG",
       "match_date": "2015-03-13",
@@ -718,6 +722,10 @@
       "pool": "A"
     },
     {
+      "loser": "ZIM",
+      "team_one_score": "288/4 (48.4)",
+      "team_two_score": "287 (48.5)",
+      "result": "India won by 6 wickets",
       "city": "Auckland",
       "stadium": "Eden Park",
       "match_date": "2015-03-14",
@@ -733,6 +741,10 @@
       "pool": "B"
     },
     {
+      "loser": "SCO",
+      "team_one_score": "133/3 (15.2)",
+      "team_two_score": "130 (25.4)",
+      "result": "Australia won by 7 wickets",
       "city": "Hobart",
       "stadium": "Bellerive Oval",
       "match_date": "2015-03-14",
@@ -783,8 +795,8 @@
       "match_date": "2015-03-18",
       "match_day": "Wednesday",
       "match_type": "DN",
-      "team_one_long": "A1",
-      "team_one_short": "A1",
+      "team_one_long": "NZ",
+      "team_one_short": "NZ",
       "team_two_long": "B4",
       "team_two_short": "B4",
       "start_time": "02:30 pm",
@@ -798,8 +810,8 @@
       "match_date": "2015-03-19",
       "match_day": "Thursday",
       "match_type": "DN",
-      "team_one_long": "A2",
-      "team_one_short": "A2",
+      "team_one_long": "AUS",
+      "team_one_short": "AUS",
       "team_two_long": "B3",
       "team_two_short": "B3",
       "start_time": "02:30 pm",
@@ -813,10 +825,10 @@
       "match_date": "2015-03-20",
       "match_day": "Friday",
       "match_type": "DN",
-      "team_one_long": "A3",
-      "team_one_short": "A3",
-      "team_two_long": "B2",
-      "team_two_short": "B2",
+      "team_one_long": "SRI",
+      "team_one_short": "SRI",
+      "team_two_long": "SA",
+      "team_two_short": "SA",
       "start_time": "02:00 pm",
       "match_datetime": "2015-03-20T14:00+10:30",
       "timezone": "Australia/Adelaide",
@@ -828,10 +840,10 @@
       "match_date": "2015-03-21",
       "match_day": "Saturday",
       "match_type": "DN",
-      "team_one_long": "A4",
-      "team_one_short": "A4",
-      "team_two_long": "B1",
-      "team_two_short": "B1",
+      "team_one_long": "BAN",
+      "team_one_short": "BAN",
+      "team_two_long": "IND",
+      "team_two_short": "IND",
       "start_time": "02:00 pm",
       "match_datetime": "2015-03-21T14:00+13:00",
       "timezone": "Pacific/Auckland",
@@ -888,16 +900,16 @@
       "name": "England",
       "pool": "A",
       "selected": false,
-      "pts": 2,
-      "nrr": -1.001,
+      "pts": 4,
+      "nrr": -0.753,
       "knockedOut": true
     },
     {
       "name": "Australia",
       "pool": "A",
       "selected": false,
-      "pts": 7,
-      "nrr": 1.597
+      "pts": 9,
+      "nrr": 2.257
     },
     {
       "name": "Sri Lanka",
@@ -925,7 +937,7 @@
       "pool": "A",
       "selected": false,
       "pts": 2,
-      "nrr": -1.881,
+      "nrr": -1.853,
       "knockedOut": true
     },
     {
@@ -933,7 +945,7 @@
       "pool": "A",
       "selected": false,
       "pts": 0,
-      "nrr": -1.769,
+      "nrr": -2.218,
       "knockedOut": true
     },
     {
@@ -947,8 +959,8 @@
       "name": "India",
       "pool": "B",
       "selected": false,
-      "pts": 10,
-      "nrr": 2.157
+      "pts": 12,
+      "nrr": 1.827
     },
     {
       "name": "Pakistan",
@@ -969,7 +981,7 @@
       "pool": "B",
       "selected": false,
       "pts": 2,
-      "nrr": -0.595,
+      "nrr": -0.527,
       "knockedOut": true
     },
     {
