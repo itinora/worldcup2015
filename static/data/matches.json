@@ -760,6 +760,10 @@
       "pool": "A"
     },
     {
+      "loser": "UAE",
+      "team_one_score": "176/4 (30.3)",
+      "team_two_score": "175 (47.4)",
+      "result": "West Indiws won by 6 wickets",
       "city": "Napier",
       "stadium": "McLean Park",
       "match_date": "2015-03-15",
@@ -775,6 +779,10 @@
       "pool": "B"
     },
     {
+      "loser": "IRE",
+      "team_one_score": "241/3 (46.1)",
+      "team_two_score": "237 (50.0)",
+      "result": "Pakistan won by 7 wickets",
       "city": "Adelaide",
       "stadium": "Adelaide Oval",
       "match_date": "2015-03-15",
@@ -795,10 +803,10 @@
       "match_date": "2015-03-18",
       "match_day": "Wednesday",
       "match_type": "DN",
-      "team_one_long": "NZ",
-      "team_one_short": "NZ",
-      "team_two_long": "B4",
-      "team_two_short": "B4",
+      "team_one_long": "Sri Lanka",
+      "team_one_short": "SRI",
+      "team_two_long": "South Africa",
+      "team_two_short": "SA",
       "start_time": "02:30 pm",
       "match_datetime": "2015-03-18T14:30+11:00",
       "timezone": "Australia/Sydney",
@@ -810,10 +818,10 @@
       "match_date": "2015-03-19",
       "match_day": "Thursday",
       "match_type": "DN",
-      "team_one_long": "AUS",
-      "team_one_short": "AUS",
-      "team_two_long": "B3",
-      "team_two_short": "B3",
+      "team_one_long": "Bangladesh",
+      "team_one_short": "BAN",
+      "team_two_long": "India",
+      "team_two_short": "IND",
       "start_time": "02:30 pm",
       "match_datetime": "2015-03-19T14:30+11:00",
       "timezone": "Australia/Melbourne",
@@ -825,10 +833,10 @@
       "match_date": "2015-03-20",
       "match_day": "Friday",
       "match_type": "DN",
-      "team_one_long": "SRI",
-      "team_one_short": "SRI",
-      "team_two_long": "SA",
-      "team_two_short": "SA",
+      "team_one_long": "Australia",
+      "team_one_short": "AUS",
+      "team_two_long": "Pakistan",
+      "team_two_short": "PAK",
       "start_time": "02:00 pm",
       "match_datetime": "2015-03-20T14:00+10:30",
       "timezone": "Australia/Adelaide",
@@ -840,10 +848,10 @@
       "match_date": "2015-03-21",
       "match_day": "Saturday",
       "match_type": "DN",
-      "team_one_long": "BAN",
-      "team_one_short": "BAN",
-      "team_two_long": "IND",
-      "team_two_short": "IND",
+      "team_one_long": "New Zealand",
+      "team_one_short": "NZ",
+      "team_two_long": "West Indies",
+      "team_two_short": "WI",
       "start_time": "02:00 pm",
       "match_datetime": "2015-03-21T14:00+13:00",
       "timezone": "Pacific/Auckland",
@@ -966,15 +974,15 @@
       "name": "Pakistan",
       "pool": "B",
       "selected": false,
-      "pts": 6,
-      "nrr": -0.194
+      "pts": 8,
+      "nrr": -0.085
     },
     {
       "name": "West Indies",
       "pool": "B",
       "selected": false,
-      "pts": 4,
-      "nrr": -0.511
+      "pts": 6,
+      "nrr": -0.053
     },
     {
       "name": "Zimbabwe",
@@ -989,14 +997,14 @@
       "pool": "B",
       "selected": false,
       "pts": 6,
-      "nrr": -1.014
+      "nrr": -0.933
     },
     {
       "name": "United Arab Emirates",
       "pool": "B",
       "selected": false,
       "pts": 0,
-      "nrr": -1.961,
+      "nrr": -2.032,
       "knockedOut": true
     }
   ]
