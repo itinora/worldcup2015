@@ -997,7 +997,8 @@
       "pool": "B",
       "selected": false,
       "pts": 6,
-      "nrr": -0.933
+      "nrr": -0.933,
+      "knockedOut": true
     },
     {
       "name": "United Arab Emirates",
