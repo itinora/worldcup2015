@@ -798,6 +798,10 @@
       "pool": "B"
     },
     {
+      "loser": "SRI",
+      "team_one_score": "133 (37.2)",
+      "team_two_score": "134/1 (18)",
+      "result": "South Africa won by 9 wickets",
       "city": "Sydney",
       "stadium": "SCG",
       "match_date": "2015-03-18",
@@ -865,8 +869,8 @@
       "match_type": "DN",
       "team_one_long": "QF4 Winner",
       "team_one_short": "QF4",
-      "team_two_long": "QF1 Winner",
-      "team_two_short": "QF1",
+      "team_two_long": "South Africa",
+      "team_two_short": "SA",
       "start_time": "02:00 pm",
       "match_datetime": "2015-03-24T14:00+13:00",
       "timezone": "Pacific/Auckland",
@@ -924,7 +928,8 @@
       "pool": "A",
       "selected": false,
       "pts": 8,
-      "nrr": 0.371
+      "nrr": 0.371,
+      "knockedOut": true
     },
     {
       "name": "Bangladesh",
