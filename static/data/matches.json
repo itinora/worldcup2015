@@ -817,6 +817,10 @@
       "pool": "F"
     },
     {
+      "loser": "BAN",
+      "team_one_score": "193 (45)",
+      "team_two_score": "302/6 (50)",
+      "result": "India won by 109 runs",
       "city": "Melbourne",
       "stadium": "MCG",
       "match_date": "2015-03-19",
@@ -884,8 +888,8 @@
       "match_type": "DN",
       "team_one_long": "QF3 Winner",
       "team_one_short": "QF3",
-      "team_two_long": "QF2 Winner",
-      "team_two_short": "QF2",
+      "team_two_long": "India",
+      "team_two_short": "IND",
       "start_time": "02:30 pm",
       "match_datetime": "2015-03-26T14:30+11:00",
       "timezone": "Australia/Sydney",
@@ -936,7 +940,8 @@
       "pool": "A",
       "selected": false,
       "pts": 7,
-      "nrr": 0.136
+      "nrr": 0.136,
+      "knockedOut": true
     },
     {
       "name": "New Zealand",
