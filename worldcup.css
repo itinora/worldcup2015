@@ -279,6 +279,9 @@ body {
     -ms-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: top left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 530px;
 }
 
 .team-flag {
