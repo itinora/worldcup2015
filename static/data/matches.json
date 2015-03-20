@@ -836,6 +836,10 @@
       "pool": "F"
     },
     {
+      "loser": "PAK",
+      "team_one_score": "216/4 (33.5)",
+      "team_two_score": "213 (49.5)",
+      "result": "Australia won by 6 wickets",
       "city": "Adelaide",
       "stadium": "Adelaide Oval",
       "match_date": "2015-03-20",
@@ -886,8 +890,8 @@
       "match_date": "2015-03-26",
       "match_day": "Thursday",
       "match_type": "DN",
-      "team_one_long": "QF3 Winner",
-      "team_one_short": "QF3",
+      "team_one_long": "Australia",
+      "team_one_short": "AUS",
       "team_two_long": "India",
       "team_two_short": "IND",
       "start_time": "02:30 pm",
@@ -985,7 +989,8 @@
       "pool": "B",
       "selected": false,
       "pts": 8,
-      "nrr": -0.085
+      "nrr": -0.085,
+      "knockedOut": true
     },
     {
       "name": "West Indies",
