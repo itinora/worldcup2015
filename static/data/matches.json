@@ -855,6 +855,10 @@
       "pool": "F"
     },
     {
+      "loser": "WI",
+      "team_one_score": "393/6 (50.0)",
+      "team_two_score": "250 (30.3)",
+      "result": "New Zealand won by 143 runs",
       "city": "Wellington",
       "stadium": "Regional Stadium",
       "match_date": "2015-03-21",
@@ -875,8 +879,8 @@
       "match_date": "2015-03-24",
       "match_day": "Tuesday",
       "match_type": "DN",
-      "team_one_long": "QF4 Winner",
-      "team_one_short": "QF4",
+      "team_one_long": "New Zealand",
+      "team_one_short": "NZ",
       "team_two_long": "South Africa",
       "team_two_short": "SA",
       "start_time": "02:00 pm",
@@ -997,7 +1001,8 @@
       "pool": "B",
       "selected": false,
       "pts": 6,
-      "nrr": -0.053
+      "nrr": -0.053,
+      "knockedOut": true
     },
     {
       "name": "Zimbabwe",
