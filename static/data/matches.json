@@ -874,6 +874,10 @@
       "pool": "F"
     },
     {
+      "loser": "SA",
+      "team_one_score": "299/6 (42.5)",
+      "team_two_score": "281/5 (43)",
+      "result": "New Zealand won by 4 wickets (D/L Method Target 298)",
       "city": "Auckland",
       "stadium": "Eden Park",
       "match_date": "2015-03-24",
@@ -909,8 +913,8 @@
       "match_date": "2015-03-29",
       "match_day": "Sunday",
       "match_type": "DN",
-      "team_one_long": "SF1 Winner",
-      "team_one_short": "SF1",
+      "team_one_long": "New Zealand",
+      "team_one_short": "NZ",
       "team_two_long": "SF2 Winner",
       "team_two_short": "SF2",
       "start_time": "02:30 pm",
@@ -979,7 +983,8 @@
       "pool": "B",
       "selected": false,
       "pts": 8,
-      "nrr": 1.707
+      "nrr": 1.707,
+      "knockedOut": true
     },
     {
       "name": "India",
