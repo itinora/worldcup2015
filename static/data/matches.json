@@ -893,6 +893,10 @@
       "pool": "F"
     },
     {
+      "loser": "IND",
+      "team_one_score": "328/7 (50)",
+      "team_two_score": "233 (46.5)",
+      "result": "Australia won by 95 runs",
       "city": "Sydney",
       "stadium": "SCG",
       "match_date": "2015-03-26",
@@ -915,8 +919,8 @@
       "match_type": "DN",
       "team_one_long": "New Zealand",
       "team_one_short": "NZ",
-      "team_two_long": "SF2 Winner",
-      "team_two_short": "SF2",
+      "team_two_long": "Australia",
+      "team_two_short": "AUS",
       "start_time": "02:30 pm",
       "match_datetime": "2015-03-29T14:30+11:00",
       "timezone": "Australia/Melbourne",
@@ -991,7 +995,8 @@
       "pool": "B",
       "selected": false,
       "pts": 12,
-      "nrr": 1.827
+      "nrr": 1.827,
+      "knockedOut": true
     },
     {
       "name": "Pakistan",
