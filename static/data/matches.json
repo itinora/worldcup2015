@@ -912,6 +912,10 @@
       "pool": "F"
     },
     {
+      "loser": "NZ",
+      "team_one_score": "183 (45.0)",
+      "team_two_score": "186/3 (33.1)",
+      "result": "Australia won by 7 wickets",
       "city": "Melbourne",
       "stadium": "MCG",
       "match_date": "2015-03-29",
@@ -964,7 +968,8 @@
       "pool": "A",
       "selected": false,
       "pts": 12,
-      "nrr": 2.564
+      "nrr": 2.564,
+      "knockedOut": true
     },
     {
       "name": "Afghanistan",
